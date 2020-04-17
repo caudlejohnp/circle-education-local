@@ -43,7 +43,7 @@ workexperience:
     title: "Physical Operations Manger & Sowtware Coordinator"
     location: "Lubbock, TX"
 
-  education:
+education:
   - name: "Lubbock Coding Acaademy"
     dates: "April 2019 - May 2020"
     degree: "Web Development"
