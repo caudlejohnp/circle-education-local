@@ -323,6 +323,27 @@ coupon_input:
   small_width: "12"
   medium_width: "6"
   options: []
+coding_inputs:
+- name: what_are_your_goals_with_learning_to_code_and_why_are_you_taking_classes_
+  label: Why do you want to learn to code?
+  description: ''
+  type: textarea
+  value: ''
+  placeholder: Why do you want to learn to code?
+  required: false
+  small_width: "12"
+  medium_width: "12"
+  options: []
+- name: previous_coding_learning
+  label: Describe the previous efforts you've made to learn to code
+  description: ''
+  type: textarea
+  value: ''
+  placeholder: Describe the previous efforts you've made to learn to code
+  required: false
+  small_width: "12"
+  medium_width: "12"
+  options: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -386,7 +407,7 @@ coupon_input:
           <div class="col-12 col-md-6 mb-4">
             {% include referral-question.html %}
           </div>
-
+          {% include fields.html fields=page.coding_inputs %}
           <div class="mb-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
             <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
