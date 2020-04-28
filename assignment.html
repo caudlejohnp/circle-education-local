@@ -6,14 +6,17 @@ description: ""
 amp_components:
 - amp-img
 - amp-recaptcha-input
+- amp-vimeo
 redirect_from: []
-heading: New Student Assignment
+heading: Admissions Coding Challenge
 form_heading: Student Information
 title: Assignment
-challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
-  please describe in 1-2 paragraphs what the code displayed in the picture is creating."
-challenge_descript2: "This is not a test of your coding knowledge. You are encouraged to use online resources to find answers that you don't know —
-  as a developer that will be an important part of your job! Here are some resources we recommend using:"
+challenge_description:
+- "This Code Challenge is not designed to test your coding ability, but rather your resourcefulness, patience, attention to detail, and ability to follow directions. For some it will be easy if you have been studying code on your own, for others, it may be quite challenging. If this is the first time you’re seeing these coding languages, it may take some time and research."
+- "Keep in mind, if you are admitted to our program, we specialize in teaching true beginners! Get as far as you can, and submit your answer even if you don’t get all the way through."
+- "If you simply follow the directions to the letter, you will complete the task no sweat!"
+challenge_steps:
+- "<Click this CodePen link></Click><https://codepen.io/austincoding/pen/LYpNvrp> to open up your starter code:"
 img_src: /assets/uploads/coding-assignment.png
 resources:
 - name: What is the web?
@@ -42,16 +45,56 @@ resources:
 <main class="mt-90 pt-1 pb-5 px-4 px-md-0">
   <div class="my-10 container mb-6">
     <h1 class="text-center font-family-alt display-5">
+      {{ school.name | liquify }}
+    </h1>
+    <h1 class="text-center font-family-alt display-5">
       {{ page.heading | liquify }}
     </h1>
   </div>
 
   <div class="row">
-    <!-- Form -->
     <div class="col-xs-10 col-sm-10 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
-      <h2 class="mx-auto mb-4 w-100">
-        {{ page.form_heading | liquify }}
-      </h2>
+      {% for item in page.challenge_description %}
+        <p>{{ item }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div class="row mt-4">
+    <div class="col-xs-10 col-sm-10 mx-auto col-md-7 px-5 col-lg-7 d-flex flex-column justify-content-center">
+      <p class="mt-4">1. Click this CodePen link <a href="https://codepen.io/austincoding/pen/LYpNvrp">https://codepen.io/austincoding/pen/LYpNvrp</a> to open up your starter code:</p>
+      <div class="px-4">
+        <a href="https://codepen.io/austincoding/pen/LYpNvrp" target="_blank">
+          <amp-img height="172" width="500" layout="responsive" class="img-fluid mw-100 rounded" src="/assets/uploads/coding-assignment-img.jpg" alt="Code Pen"></amp-img>
+        </a>
+      </div>
+      <p class="mt-4">2. Watch the video here <a href="https://vimeo.com/411054414">https://vimeo.com/411054414</a> as it explains what’s going on with the code:</p>
+      <div class="px-4">
+        <amp-vimeo
+          data-videoid="411054414"
+          layout="responsive"
+          width="500"
+          height="281"
+        ></amp-vimeo>
+      </div>
+      <p class="mt-4">3. Pause, rewind, rewatch, google, and rewind again the video to fully understand!</p>
+      <p class="mt-4">4. Directions for the Code Challenge are written in <a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)" target="_blank">Commented Code</a> inside the CodePen.
+      </p>
+      <div class="px-4">
+        <p class="mt-4">1. Commented code is text for only humans to read that the computer ignores</p>
+        <p class="mt-4">2. &lt!--  HTML commented code looks like this --></p>
+        <p class="mt-4">3. /*  CSS commented code looks like this  */</p>
+        <p class="mt-4">4. //  JavaScript commented code looks like this</p>
+        <p class="mt-4">The directions are 5 steps, starting in the HTML code with the final step in CSS</p>
+      </div>
+      <p class="mt-4">5. Once you’ve completed the challenge, save this CodePen to your account.</p>
+      <p class="mt-4">6. Copy the URL at the top of the browser and paste it in the form input below:</p>
+    </div>
+    <div class="col-xs-10 col-sm-10 mx-auto col-md-7 px-3 col-lg-7 d-flex flex-column justify-content-center"></div>
+  </div>
+  
+  <div class="mt-5">
+    <div class="col-xs-10 col-sm-10 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
       <form
         action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.assignment_form_guid }}"
         target="_top"
@@ -63,18 +106,18 @@ resources:
         <div class="form-container">
           <div class="row center-form mb-4">
             <!-- Input -->
-            <div class="col-6">
+            <div class="col-12">
               <div class="form-group">
-                <label for="first-name-cg" class="form-label">
-                  First Name <span class="text-red-a">*</span>
+                <label for="url" class="form-label">
+                  URL <span class="text-red-a">*</span>
                 </label>
 
                 <input
-                  id="first-name-cg"
+                  id="url"
                   type="text"
                   class="form-control"
-                  name="firstname"
-                  placeholder="First name"
+                  name="url"
+                  placeholder="URL"
                   required data-msg="Please enter your first name."
                   data-error-class="u-has-error"
                   data-success-class="u-has-success"
@@ -82,141 +125,45 @@ resources:
               </div>
             </div>
             <!-- End Input -->
-
+            <p>Bonus Challenge: Explain in your own words how the JavaScript interacts with the HTML to make the button do what the button does: </p>
             <!-- Input -->
-            <div class="col-6">
+            <div class="mb-3 mb-sm-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }} {{ field.class }}">
               <div class="form-group">
-                <label for="last-name-cg" class="form-label">
-                  Last Name <span class="text-red-a">*</span>
+                <label for="explanation" class="form-label">
+                  Explanation
                 </label>
-
-                <input
-                  id="last-name-cg"
-                  type="text"
-                  class="form-control"
-                  name="lastname"
-                  placeholder="Last name"
-                  required data-msg="Please enter your last name."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-              </div>
-            </div>
-            <!-- End Input -->
-
-            <!-- Input -->
-            <div class="col-12 my-4">
-              <div class="form-group">
-                <label for="email-cg" class="form-label align-middle">
-                  Email (Same email you used when applying.) <span class="text-red-a">*</span>
-                </label>
-
-                <input
-                  id="email-cg"
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  placeholder="Email"
-                  required data-msg="Please enter a valid email address."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-              </div>
-            </div>
-            <!-- End Input -->
-            <h2 class="mx-auto mb-4 w-100 col-12">
-              Student Essays
-            </h2>
-            <!-- Input -->
-            <div class="js-form-message mb-6 col-sm-12">
-              <label for="goals" class="form-label">
-                What are your goals with learning to code and why are you a good fit for ACA? <span class="text-red-a">*</span>
-              </label>
-
-              <div class="input-group">
                 <textarea
+                  id="explanation"
                   class="form-control"
-                  id="goals"
-                  rows="14"
-                  name="what_are_your_goals_with_learning_to_code_and_why_are_you_taking_classes_"
-                  placeholder="3-5 paragraphs"
-                  aria-label="Goals question"
-                  required
-                  data-msg="Please enter a response."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
+                  name="explanation"
+                  rows="12"
+                  placeholder="Describe your code in a few setntences"
+                  aria-label="Explanation"
                 ></textarea>
               </div>
             </div>
             <!-- End Input -->
-
-            <!-- Input -->
-            <div class="js-form-message mb-6 col-sm-12">
-              <label for="previous-efforts" class="form-label">
-                Describe the previous efforts you've made to learn to code. <span class="text-red-a">*</span>
-              </label>
-
-              <div class="input-group">
-                <textarea
-                  id="previous-efforts"
-                  class="form-control"
-                  rows="10"
-                  name="previous_coding_learning"
-                  placeholder="1-2 paragraphs"
-                  aria-label="Previous efforts question"
-                  required
-                  data-msg="Please enter a response."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                ></textarea>
-              </div>
-            </div>
-            <!-- End Input -->
-            {% include challenge.html %}
-            <div class="input-group">
-              <textarea
-                id="code-challenge"
-                class="form-control"
-                rows="10"
-                name="coding_assignment_answer"
-                placeholder="1-2 paragraphs"
-                aria-label="Coding Challenge Question"
-                required
-                data-msg="Please enter a response."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              ></textarea>
-            </div>
-
-            {% if page.categories contains 'landing' %}
-              <div class="col-12">
-                {% include data-agreement.html %}
-              </div>
-            {% endif %}
-
-          </div>
-          <div class="text-center">
-            <div submit-error>
-              <template type="amp-mustache">
-                <p class="text-danger">There was an error with your request. Please try again.</p>
-              </template>
-            </div>
-          </div>
-
-          <div class="d-flex justify-content-center mb-4">
-            <button
-              type="submit"
-              class="text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white mx-auto"
-            >
-              Submit
-            </button>
-          </div>
-          <div class="col-12">
-            {% include data-agreement.html %}
           </div>
         </div>
       </form>
       <!-- End Form -->
+      <p class="mt-4">HELPFUL NOTES FOR THIS CHALLENGE:</p>
+      <ul>
+        <li>
+          If you get stuck, feel free to reach out to your Admissions Advisor for some guidance. <strong>It’s not meant to trick you!</strong>
+        </li>
+        <li>
+          If you mess up your code and need to reset the assignment, simply click on the CodePen link again, “fork” it again, and it will go back to the start. <i>You might need to rename the Pen in your account.</i>
+        </li>
+        <li>
+          This is meant to pique your curiosity about how code works together. You don’t need to understand every single line and what it does.
+        </li>
+        <li>
+          If any particular line of code doesn’t make sense, GOOGLE IS YOUR FRIEND! This is totally “open-book.”
+        </li>
+      </ul>
+      <p class="mt-4">What the answer should look like:</p>
+      <amp-img height="172" width="500" layout="responsive" class="img-fluid mw-100 rounded" src="/assets/uploads/assignment-solution.png" alt="Assignment Solution"></amp-img>
     </div>
   </div>
 
