@@ -104,6 +104,23 @@ resources:
         </p>
       </li>
     </ul>
+    <div class="bg-light col-xs-10 col-sm-10 mx-auto col-md-7 px-5 col-lg-7 mt-4">
+      <p>HELPFUL NOTES FOR THIS CHALLENGE:</p>
+      <ul>
+        <li>
+          If you get stuck, feel free to reach out to your Admissions Advisor for some guidance. <strong>It’s not meant to trick you!</strong>
+        </li>
+        <li>
+          If you mess up your code and need to reset the assignment, simply click on the CodePen link again, “fork” it again, and it will go back to the start. <i>You might need to rename the Pen in your account.</i>
+        </li>
+        <li>
+          This is meant to pique your curiosity about how code works together. You don’t need to understand every single line and what it does.
+        </li>
+        <li>
+          If any particular line of code doesn’t make sense, GOOGLE IS YOUR FRIEND! This is totally “open-book.”
+        </li>
+      </ul>
+    </div>
     <!-- <div class="col-xs-10 col-sm-10 mx-auto col-md-7 px-3 col-lg-7 d-flex flex-column justify-content-center"></div> -->
   </div>
   
@@ -159,23 +176,19 @@ resources:
             <!-- End Input -->
           </div>
         </div>
+        <div class="d-flex justify-content-center mb-4">
+          <button
+            type="submit"
+            class="text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white mx-auto"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="col-12">
+          {% include data-agreement.html %}
+        </div>
       </form>
       <!-- End Form -->
-      <p class="mt-4">HELPFUL NOTES FOR THIS CHALLENGE:</p>
-      <ul>
-        <li>
-          If you get stuck, feel free to reach out to your Admissions Advisor for some guidance. <strong>It’s not meant to trick you!</strong>
-        </li>
-        <li>
-          If you mess up your code and need to reset the assignment, simply click on the CodePen link again, “fork” it again, and it will go back to the start. <i>You might need to rename the Pen in your account.</i>
-        </li>
-        <li>
-          This is meant to pique your curiosity about how code works together. You don’t need to understand every single line and what it does.
-        </li>
-        <li>
-          If any particular line of code doesn’t make sense, GOOGLE IS YOUR FRIEND! This is totally “open-book.”
-        </li>
-      </ul>
       <p class="mt-4">What the answer should look like:</p>
       <amp-img height="172" width="500" layout="responsive" class="img-fluid mw-100 rounded" src="/assets/uploads/assignment-solution.png" alt="Assignment Solution"></amp-img>
     </div>
