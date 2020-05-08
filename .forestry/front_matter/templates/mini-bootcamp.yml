@@ -39,3 +39,5 @@ fields:
     wysiwyg: true
     schema:
       format: html-blocks
+pages:
+- mini-bootcamps.html
