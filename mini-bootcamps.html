@@ -1,0 +1,53 @@
+---
+layout: default
+permalink: "/courses/mini-bootcamps/"
+title: Courses - Mini Bootcamps
+amp_components:
+- amp-carousel
+- amp-lightbox
+- amp-img
+- amp-recaptcha-input
+course_guide_img: "/assets/uploads/WordPress-Fundamentals-Course-Guide-Master-Table-Content.png"
+course_guide: "/assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf"
+course_guide_form_guid: b742c715-7280-4cae-bb5a-5f47b31266fa
+redirect_from: []
+hero: js
+hero_heading: "4-Day Mini Bootcamp:<br />Build a WordPress + Online Store"
+hero_text: WordPress powers over one-third of all websites on the internet. In this
+  course, you'll learn the fundamentals of this powerful content management system
+  (CMS) and develop the skills to either pursue a career in WordPress development
+  or be a Technical Support Specialist with WP Engine – one of the industry leaders
+  in managed WordPress hosting and the premier WordPress Digital Experience Platform.
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+<!-- htmllint preset="none" -->
+<div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
+<!-- htmllint preset="$previous" -->
+  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-sm-4 text-center">
+    {{ page.hero_heading | liquify }}
+  </h1>
+  <p class="text-white mx-auto px-2 mw-600">
+    {{ page.hero_text | liquify }}
+  </p>
+  <div class="d-flex mt-4 align-items-center justify-content-center">
+    <div class="mr-2">
+      {% include btn-apply.html %}
+    </div>
+  </div>
+</div>
