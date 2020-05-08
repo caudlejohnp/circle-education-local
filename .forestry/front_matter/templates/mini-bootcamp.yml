@@ -35,3 +35,7 @@ fields:
 - type: textarea
   name: hero_text
   label: hero_text
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
