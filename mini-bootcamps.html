@@ -13,12 +13,14 @@ course_guide_form_guid: b742c715-7280-4cae-bb5a-5f47b31266fa
 redirect_from: []
 hero: js
 hero_heading: 4-Day Mini Bootcamp:<br />Build a WordPress + Online Store
-hero_text: "<h3>Get your business online! In 4-days you’ll learn the tools needed
+hero_text: <h3>Get your business online! In 4-days you’ll learn the tools needed
   to build a website, host it online, and create an online store for your business!
   Through the use of WordPress &amp; WooCommerce you’ll have full control over your
-  website and it’s content!</h3><h4><br>This workshop is designed for those with small
+  website and it’s content!</h3>
+card_text: "<h4><strong>This workshop is designed for those with small
   businesses or those wanting to start a small business. Want to get a website up
-  and maintain it yourself? This course is for you!</h4><h4>Course Breakdown:</h4><ul><li><p>Day
+  and maintain it yourself? This course is for you!</strong></h4>"
+card_breakdown: "<h4>Course Breakdown:</h4><ul><li><p>Day
   1: Get your tools, Get Your Plan, Build a Website</p></li><li><p>Day 2: Host Your
   Website</p></li><li><p>Day 3: Create Your Online Store</p></li><li><p>Day 4: Review,
   Recap, &amp; Show Off!</p></li></ul>"
@@ -50,9 +52,43 @@ hero_text: "<h3>Get your business online! In 4-days you’ll learn the tools nee
   <div class="text-white mx-auto px-2 container">
     {{ page.hero_text | liquify }}
   </div>
+
   <div class="d-flex mt-4 align-items-center justify-content-center">
     <div class="mr-2">
       {% include btn-apply.html %}
     </div>
   </div>
 </div>
+
+<section class="py-8 container">
+  <div class="row d-flex flex-column align-items-center">
+    <!-- course card start -->
+      <div
+        amp-fx="fade-in"
+        data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
+        class="w-100 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded course-hover"
+        style="min-height: 350px;"
+      >
+        <div>
+          <div
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+            class="display-6 mb-4 pl-2 pl-sm-0"
+          >
+          </div>
+          <div>
+              <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
+                <div class="d-flex justify-content-start text-center mb-3">
+                  {{ page.card_text | liquify }}
+                </div>
+                {{ page.card_breakdown | liquify }}
+              </ul>
+          </div>
+        </div>
+        
+      </div>
+    <!-- course card end -->
+  </div>
+</section>
