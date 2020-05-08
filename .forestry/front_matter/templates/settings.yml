@@ -235,6 +235,11 @@ fields:
     config:
       required: false
     label: getaccept_entity_id
+  - name: hubspot_company_id
+    type: text
+    config:
+      required: false
+    label: hubspot_company_id
   - type: text
     name: twitter
     label: twitter
@@ -340,6 +345,12 @@ fields:
       config:
         required: false
       label: hubspot_ticket_id
+    - name: getaccept_entity_id
+      type: text
+      config:
+        required: false
+      label: getaccept_entity_id
+      description: overrides getaccept_entity
     - name: getaccept_template_id
       type: text
       config:

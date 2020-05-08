@@ -133,9 +133,9 @@ schools:
       price_header: Total Price
       price: "$490"
       payment_deposit: "$2990"
-      payment_plan_paycove_template: ''
+      payment_plan_paycove_template: 8 Week Payment Plan
       deposit_hubspot_product_id: 87065227
-      payment_plan_hubspot_product_id: ''
+      payment_plan_hubspot_product_id: 99071510
       picture: ''
     - title: Finance through Climb
       description: 'Finance your education through Climb. Click here for more information:
@@ -348,10 +348,10 @@ schools:
           {{ section.title }}
         </h2>
       </div>
-      <div class="row px-5 py-2 justify-content-center">
+      <div class="row px-5 py-2 mb-5 justify-content-center">
       {% for option in section.options %}
         {% unless option.title contains 'Single Course' %}
-          <div class="col-sm-6 col-md-3 border p-2 mx-4">
+          <div class="col-sm-6 col-md-3 border p-2 mx-4 d-flex flex-column justify-content-between">
             <div class="shadow py-3 bg-light">
               {% if option.picture != '' %}
                 <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
@@ -365,15 +365,16 @@ schools:
                 <p>{{ option.description }}</p>
               </div>
             </div>
+            <div class="mt-6 {%if school.inverted %}px-6{% endif %} d-flex justify-content-center pb-5">
+              <div class="col-2 d-flex justify-content-center">
+                {% include btn-apply.html %}
+              </div>
+            </div>
           </div>
         {% endunless %}
       {% endfor %}
     </div>
-    <div class="mt-6 {%if school.inverted %}px-6{% endif %} d-flex justify-content-center pb-5">
-      <div class="col-2 d-flex justify-content-center">
-        {% include btn-apply.html %}
-      </div>
-    </div>
+
   {% endfor %}
   <div class="bg-light py-4">
     <div class="row justify-content-center">
