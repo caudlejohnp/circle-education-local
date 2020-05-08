@@ -1,0 +1,37 @@
+---
+label: Mini Bootcamp
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: title
+  label: title
+- type: list
+  name: amp_components
+  label: amp_components
+- type: file
+  name: course_guide_img
+  label: course_guide_img
+- type: file
+  name: course_guide
+  label: course_guide
+- type: text
+  name: course_guide_form_guid
+  label: course_guide_form_guid
+- type: list
+  name: redirect_from
+  label: redirect_from
+- type: text
+  name: hero
+  label: hero
+- type: text
+  name: hero_heading
+  label: hero_heading
+- type: textarea
+  name: hero_text
+  label: hero_text
