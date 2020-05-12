@@ -144,6 +144,10 @@ features:
   img_width: 90px
 schools:
 - key: austincodingacademy
+  hero_text: Learn the most popular languages for making websites, web apps, games,
+    animations, and mobile applications. In this track you'll learn front-end and back-end
+    web development, some of today's most versatile and sought-after skills that you
+    can take with you wherever you go.
   next_start_date: Tuesday, April 13th
   backend: Node.js/Express.js
   courses:
@@ -224,6 +228,10 @@ schools:
     style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark
       hover-white center mt-4
 - key: circlecoding
+  hero_text: Learn the most popular languages for making websites, web apps, games,
+    animations, and mobile applications. In this track you'll learn front-end and back-end
+    web development, some of today's most versatile and sought-after skills that you
+    can take with you wherever you go.
   courses:
   - code: Web 101
     title: Intro to Web Development
@@ -272,6 +280,10 @@ schools:
     - Expand your knowledge of Git
     - Deep-Dive into HTTPS protocol
 - key: lubbockcodingacademy
+  hero_text: Our sister school, Austin Coding Academy, has launched a totally 
+    online program designed for you to learn from home as you become a web developer. 
+    Join students from across the country for our next virtual Full Stack JavaScript Program, 
+    in one of our part-time or full-time classes, powered by Austin Coding Academy.
   next_start_date: Tuesday, April 7th 2020
   backend: C#/.Net
   courses: []
@@ -293,6 +305,10 @@ schools:
       hover-white">Financing Options</span> <span class="text-white hover-white fas
       fa-arrow-right small"></span></a>
 - key: texastechuniversitycodingacademy
+  hero_text: Our sister school, Austin Coding Academy, has launched a totally 
+    online program designed for you to learn from home as you become a web developer. 
+    Join students from across the country for our next virtual Full Stack JavaScript Program, 
+    in one of our part-time or full-time classes, powered by Austin Coding Academy.
   next_start_date: SOON!
   backend: Node.js/Express.js
   courses: []
@@ -325,7 +341,7 @@ schools:
   </h1>
   <h4 class="mb-5 mb-md-10 text-white font-family-alt font-weight-bold text-center">{{ page.hero_subheading }}</h4>
   <p class="text-white text-center mx-auto px-2 mw-600">
-    {{ page.hero_text | liquify }}
+    {{ school.hero_text | liquify }}
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
     {% if school.course_guide_online != '' %}

@@ -1,0 +1,35 @@
+---
+layout: default
+permalink: "/course-guide-wp/"
+head_title: "Course Guide | {{ school.name }}"
+description: ""
+redirect_from: []
+title: Course Guide
+course_guide_img: "/assets/uploads/WordPress-Fundamentals-Course-Guide-Master-Table-Content.png"
+course_guide: "/assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf"
+course_guide_form_guid: b742c715-7280-4cae-bb5a-5f47b31266fa
+amp_components:
+- amp-recaptcha-input
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+<div class="container mt-90 space-2">
+  <div class="card-deck d-flex justify-content-center">
+    {% include course-guide-form.html text_class="text-white" course_guide_href=page.course_guide course_guide_form_guid=page.course_guide_form_guid %}
+  </div>
+</div>

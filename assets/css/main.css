@@ -76,10 +76,13 @@
   font-display: swap;
 }
 
-body,
-p {
+body {
   font-family: 'Open Sans', sans-serif;
   color: #303133;
+}
+
+p {
+  color: inherit;
 }
 
 a {
@@ -770,7 +773,7 @@ ul.share-buttons img {
     animation: typewriter 5s steps(60) 1s 1 normal both,
       blinkTextCursor 1400ms steps(44) infinite normal;
   }
-  
+
 }
 
 /* Event Page Card Hover */
