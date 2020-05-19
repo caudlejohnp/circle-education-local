@@ -147,19 +147,19 @@ schools:
   {% endfor %}
 {% endif %}
 
-<div class="position-relative d-flex justify-content-center flex-column overflow-hidden p-0 {% if school.inverted %}container-lg{% endif %}">
-  <div class="pl-3 pl-sm-2 m-md-6 m-sm-1 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center {% if school.inverted %}bg-white mw-600 rounded shadow-lg {% endif %}">
+<div class="position-relative d-flex justify-content-center flex-column overflow-hidden p-0 container-lg">
+  <div class="pl-3 pl-sm-2 m-md-6 m-sm-1 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center bg-white mw-600 rounded shadow-lg">
     <div class="col-sm-11 col-md-10 col-lg-10 pl-0">
       <div class="my-md-11"></div>
-      <h1 class="{% if school.inverted != true %}text-white{% endif %} font-family-alt font-weight-bold display-responsive col-sm-12 col-md-9 pl-0">
+      <h1 class="font-family-alt font-weight-bold display-responsive col-sm-12 col-md-9 pl-0">
         {{ page.heading | liquify }}
       </h1>
-      <p class="{% if school.inverted != true %}text-white{% endif %} mt-4 mb-3 line-typewriter anim-typewriter">
+      <p class="mt-4 mb-3 line-typewriter anim-typewriter">
         {{ page.subheading | liquify }}
       </p>
       <div class="d-flex justify-content-start">
         <a
-        class="btn {% if school.inverted != true %}btn-outline-light btn-round{% else %}col-5 btn-outline-dark{% endif %} mr-2 d-block"
+        class="btn col-5 btn-outline-dark mr-2 d-block"
         href="/course-guide/"
         rel="noopener"
         href="#"
@@ -167,50 +167,20 @@ schools:
         Course Guide
       </a>
      
-        <div class="{% if school.inverted == true %}col-5 p-0{% endif %}">
+        <div class="col-5 p-0">
           {% include btn-apply.html %}
          </div>
       </div>
     </div>
   </div>
   <!-- htmllint preset="none" -->
-  <div id="hero-{% if school.inverted != true %}{{ page.hero | liquify }}{% else %}{{ page.circle_hero | liquify }}{% endif %}" class="bg-textured hero {% if school.inverted != true %}z-10{% else %}z-90 w-50{% endif %} h-100"></div>
+  <div id="hero-{{ page.circle_hero | liquify }}" class="bg-textured hero z-90 w-50 h-100"></div>
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
   <div class="col-12 d-flex justify-content-between p-0 bg-white">
-    {% if school.inverted %}
     <div class="col-3 bg-white m-0"></div>
-    {% endif %}
-    <div class="{% if school.inverted != true %}col-12 p-0{% else %}col-9 p-0{% endif %} m-0">
-    {% if school.inverted != true %}
-      <amp-video
-      id="my-video"
-      width="640"
-      height="360"
-      layout="responsive"
-      poster="{{ video.poster | liquify }}"
-      {% if school.inverted != true %}
-        autoplay
-      {% endif %}
-      class="d-none d-md-block"
-      loop
-      title="{{ video.title | liquify }}"
-    >
-      <source
-        src="{{ video.src | liquify }}"
-        type="video/webm"
-      />
-      <source
-        src="{{ video.src_mp4 | liquify }}"
-        type="video/mp4"
-      />
-      <div fallback>
-        <p>This browser does not support the video element.</p>
-      </div>
-    </amp-video>
-    {% endif %}
-    {% if school.inverted %}
+    <div class="col-9 p-0 m-0">
       <div id="my-overlay" class="click-to-play-overlay d-none d-md-block">
 
         <div class="play-icon" role="button" tabindex="0" on="tap:call-us" style="position: absolute;
@@ -238,23 +208,22 @@ schools:
           on="tap:call-us.close"
           tabindex="0"
           role="dialog"
-        >
-          <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center" style="height:100%;">
-            <amp-youtube
-            class="h-100"
-            data-videoid="pcCcjiMOeyg"
-            width="266.656px"
-            height="150px"
-            style="height:500px; width: 888.853333333px;"
-            tabindex="0"
-            role="presentation"
-            layout="responsive"
-            title="Abby's new career as a software developer in Dallas"
-            >
-            </amp-youtube>
-          </div>
-        </amp-lightbox>      
-    {% endif %}
+      >
+        <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center" style="height:100%;">
+          <amp-youtube
+          class="h-100"
+          data-videoid="pcCcjiMOeyg"
+          width="266.656px"
+          height="150px"
+          style="height:500px; width: 888.853333333px;"
+          tabindex="0"
+          role="presentation"
+          layout="responsive"
+          title="Abby's new career as a software developer in Dallas"
+          >
+          </amp-youtube>
+        </div>
+      </amp-lightbox>      
   </div>
   </div>
 </div>
