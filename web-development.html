@@ -659,6 +659,7 @@ schools:
             </div>
             <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="shadow border">
               <div class="text-center display-6 pt-4">
+                <!-- Find first start date of correct course type -->
                 {% assign next_start_date = "" %}
                 {% for start_date in school.start_dates %}
                   {% if start_date.course == "Full Stack Web Development" and next_start_date == "" %}
