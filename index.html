@@ -89,7 +89,7 @@ schools:
 - key: lubbockcodingacademy
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
   lightbox_youtube:
-    src_id: ''
+    src_id: 't1WnLspjLyE'
     title: ''
 - key: texastechcodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
@@ -163,7 +163,7 @@ schools:
       </p>
       <div class="d-flex justify-content-start">
         <a
-        class="btn col-5 btn-outline-dark mr-2 d-block"
+        class="btn {% if school.inverted != true %}btn-round{% endif %} col-5 btn-outline-dark mr-2 d-block"
         href="/course-guide/"
         rel="noopener"
         href="#"
