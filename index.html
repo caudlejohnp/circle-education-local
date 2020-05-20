@@ -77,6 +77,10 @@ features:
   square: true
   alt: Suitcase graphic
 schools:
+- key: circlecoding
+  lightbox_youtube:
+    src_id: 'pcCcjiMOeyg'
+    title: ''
 - key: austincodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
   lightbox_youtube:
@@ -125,7 +129,7 @@ schools:
     square: true
     alt: Suitcase graphic
   lightbox_youtube:
-    src_id: ''
+    src_id: 'QDoA1LgW9vA'
     title: ''
 
 ---
@@ -212,7 +216,7 @@ schools:
         <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center" style="height:100%;">
           <amp-youtube
           class="h-100"
-          data-videoid="pcCcjiMOeyg"
+          data-videoid="{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}QDoA1LgW9vA{% endif %}"
           width="266.656px"
           height="150px"
           style="height:500px; width: 888.853333333px;"
