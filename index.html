@@ -76,6 +76,7 @@ features:
   img: /assets/uploads/suitcase_green.png
   square: true
   alt: Suitcase graphic
+default_video: 'QDoA1LgW9vA'
 schools:
 - key: circlecoding
   lightbox_youtube:
@@ -216,7 +217,7 @@ schools:
         <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center" style="height:100%;">
           <amp-youtube
           class="h-100"
-          data-videoid="{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}QDoA1LgW9vA{% endif %}"
+          data-videoid="{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}"
           width="266.656px"
           height="150px"
           style="height:500px; width: 888.853333333px;"
