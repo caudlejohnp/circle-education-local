@@ -149,12 +149,18 @@
                   {% for link in item.links %}
                     <li class="position-relative p-0 my-2">
                       <!-- htmllint preset="none" -->
-                      <a class="p-0" {% if link.target %}target="_blank"{% endif %} href="{{ link.url | liquify }}">
-                        <!-- htmllint preset="$previous" -->
-                        <span class="text-white hover-white ">
+                      {% if item.title != "Locations" %}
+                        <a class="p-0" {% if link.target %}target="_blank"{% endif %} href="{{ link.url | liquify }}">
+                          <!-- htmllint preset="$previous" -->
+                          <span class="text-white hover-white">
+                            {{ link.title | liquify }}
+                          </span>
+                        </a>
+                      {% else %}
+                        <span class="text-white">
                           {{ link.title | liquify }}
                         </span>
-                      </a>
+                      {% endif %}
                     </li>
                   {% endfor %}
                 </ul>
