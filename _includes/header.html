@@ -189,6 +189,10 @@
                                   {{ track.name | liquify }}
                                 </span>
                               </a>
+                            {% elsif track.url == "" %}
+                                <span class="text-white">
+                                  {{ track.name | liquify }}
+                                </span>
                             {% else %}
                               <a href="{{ track.url }}" class="hover-white">
                                 <span class="text-white hover-white">
