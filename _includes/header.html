@@ -157,9 +157,17 @@
                           </span>
                         </a>
                       {% else %}
-                        <span class="text-white">
-                          {{ link.title | liquify }}
-                        </span>
+                        {% if link.url != "" %}
+                          <a href="{{ link.url | liquify }}">
+                            <span class="text-white hover-white">
+                              {{ link.title | liquify }}
+                            </span>
+                          </a>
+                        {% else %}
+                          <span class="text-white">
+                            {{ link.title | liquify }}
+                          </span>
+                        {% endif %}
                       {% endif %}
                     </li>
                   {% endfor %}
@@ -200,7 +208,6 @@
                                 </span>
                               </a>
                             {% endif %}
-                          </a>
                         </li>
                       {% else %}
                         <li class="position-relative p-0 my-2">
