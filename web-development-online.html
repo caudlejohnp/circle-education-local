@@ -17,17 +17,6 @@ hero_text: Learn the most popular languages for making websites, web apps, games
   animations, and mobile applications. In this track you'll learn front-end and back-end
   web development, some of today's most versatile and sought-after skills that you
   can take with you wherever you go.
-course_types:
-- name: Part Time
-  course: Full Stack Web Development
-  days: Monday/Wednesday
-  times: 6:30pm - 9:00pm
-  length: 36 weeks
-- name: Full Time
-  course: Full Stack Web Development
-  days: Monday-Thursday
-  times: 8:00am - 5:00pm
-  length: 18 weeks
 overview:
 - title: Remote Learning
   text: The same proven curriculum as our in-class Full Stack Web Development course
@@ -150,6 +139,17 @@ schools:
     can take with you wherever you go.
   next_start_date: Tuesday, April 13th
   backend: Node.js/Express.js
+  course_types:
+  - name: Part Time
+    course: Full Stack Web Development
+    days: Monday/Wednesday
+    times: 6:30pm - 9:00pm
+    length: 36 weeks
+  - name: Full Time
+    course: Full Stack Web Development
+    days: Monday-Thursday
+    times: 8:00am - 5:00pm
+    length: 18 weeks
   courses:
   - code: Web 101
     title: Intro to Web Development
@@ -232,7 +232,18 @@ schools:
     animations, and mobile applications. In this track you'll learn front-end and back-end
     web development, some of today's most versatile and sought-after skills that you
     can take with you wherever you go.
-  courses:
+  course_types:
+  - name: Part Time
+    course: Full Stack Web Development
+    days: Monday/Wednesday
+    times: 6:30pm - 9:00pm
+    length: 36 weeks
+  - name: Full Time
+    course: Full Stack Web Development
+    days: Monday-Thursday
+    times: 8:00am - 5:00pm
+    length: 18 weeks
+    courses:
   - code: Web 101
     title: Intro to Web Development
     description: Intro to Web Development
@@ -286,6 +297,17 @@ schools:
     in one of our part-time or full-time classes, powered by Austin Coding Academy.
   next_start_date: Tuesday, April 7th 2020
   backend: C#/.Net
+  course_types:
+  - name: Part Time
+    course: Full Stack Web Development
+    days: Monday/Wednesday
+    times: 6:30pm - 9:00pm
+    length: 36 weeks
+  - name: Full Time
+    course: Full Stack Web Development
+    days: Monday-Thursday
+    times: 8:00am - 5:00pm
+    length: 18 weeks
   courses: []
   tuition_options:
   - title: Pay Up Front
@@ -304,13 +326,19 @@ schools:
       %} bg-primary-dark text-white hover-white mt-2" target="_blank"><span class="text-white
       hover-white">Financing Options</span> <span class="text-white hover-white fas
       fa-arrow-right small"></span></a>
-- key: texastechuniversitycodingacademy
+- key: texastechcodingacademy
   hero_text: Our sister school, Austin Coding Academy, has launched a totally 
     online program designed for you to learn from home as you become a web developer. 
     Join students from across the country for our next virtual Full Stack JavaScript Program, 
     in one of our part-time or full-time classes, powered by Austin Coding Academy.
   next_start_date: SOON!
   backend: Node.js/Express.js
+  course_types:
+  - name: Part Time
+    course: Full Stack Web Development
+    days: Monday/Wednesday
+    times: 6:30pm - 9:00pm
+    length: 36 weeks
   courses: []
   tuition_options: []
 
@@ -382,7 +410,7 @@ schools:
       Course Types
     </h2>
     <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
-      {% for type in page.course_types %}
+      {% for type in school.course_types %}
       <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <div class="display-7 mb-4 text-center">
           {{ type.name }}
