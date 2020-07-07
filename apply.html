@@ -449,19 +449,21 @@ isa_inputs:
 </div>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#describe_your_ideal_career_path').removeAttribute('required')
-    document.querySelector('#what_is_an_income_share_agreement').removeAttribute('required')
+    document.querySelector('#describe_your_ideal_career_path').removeAttribute('required');
+    document.querySelector('#what_is_an_income_share_agreement').removeAttribute('required');
     document.querySelector('[name="payment_plan"]').addEventListener('change', () => { 
       var isa = document.querySelector('[name="payment_plan"]');
       // check for isa options' hs product
       if(isa.value.includes('122834138') || isa.options[isa.selectedIndex].text.includes('$0 - Full Time Course')){
         document.querySelector('#isa-questions').classList.remove('d-none');
-        document.querySelector('#describe_your_ideal_career_path').setAttribute('required', true)
-        document.querySelector('#what_is_an_income_share_agreement').setAttribute('required', true)
+        document.querySelector('#describe_your_ideal_career_path').setAttribute('required', true);
+        document.querySelector('#what_is_an_income_share_agreement').setAttribute('required', true);
       }else{
         document.querySelector('#isa-questions').classList.add('d-none');
         document.querySelector('#describe_your_ideal_career_path').removeAttribute('required');
         document.querySelector('#what_is_an_income_share_agreement').removeAttribute('required');
+        document.querySelector('#describe_your_ideal_career_path').value = "";
+        document.querySelector('#what_is_an_income_share_agreement').value = "";
       }
     })
   });
