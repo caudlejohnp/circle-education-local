@@ -447,11 +447,12 @@ isa_inputs:
     </form>
   </div>
 </div>
+{% if site.key == 'austincodingacademy' %}
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#describe_your_ideal_career_path').removeAttribute('required');
     document.querySelector('#what_is_an_income_share_agreement').removeAttribute('required');
-    document.querySelector('[name="payment_plan"]').addEventListener('change', () => { 
+    document.querySelector('[name="payment_plan"]').addEventListener('change', () => {
       var isa = document.querySelector('[name="payment_plan"]');
       // check for isa options' hs product
       if(isa.value.includes('122834138') || isa.options[isa.selectedIndex].text.includes('$0 - Full Time Course')){
@@ -468,3 +469,4 @@ isa_inputs:
     })
   });
 </script>
+{% endif %}
