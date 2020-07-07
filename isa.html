@@ -7,22 +7,11 @@ amp_components:
 - amp-lightbox
 - amp-img
 - amp-recaptcha-input
-- amp-accordian
-course_guide_img: "/assets/uploads/WordPress-Fundamentals-Course-Guide-Master-Table-Content.png"
-course_guide: "/assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf"
 course_guide_form_guid: b742c715-7280-4cae-bb5a-5f47b31266fa
 redirect_from: []
-hero: js
 hero_heading: What is an ISA?
 hero_text: <h3>Lorem Ipsum Lorem Ipsum! Lorem Ipsum? Lorem Ipsum.</h3>
 info_img: '/assets/uploads/ISA_artboard.png'
-card_text: "<h4><strong>This workshop is designed for those with small
-  businesses or those wanting to start a small business. Want to get a website up
-  and maintain it yourself? This course is for you!</strong></h4>"
-card_breakdown: "<h4>Course Breakdown:</h4><ul><li><p>Day
-  1: Get your tools, Get Your Plan, Build a Website</p></li><li><p>Day 2: Host Your
-  Website</p></li><li><p>Day 3: Create Your Online Store</p></li><li><p>Day 4: Review,
-  Recap, &amp; Show Off!</p></li></ul>"
 faqs:
 - question: Where are classes held?
   answer: We are now offering online classes optimized for working remotely through
@@ -114,7 +103,6 @@ faqs:
     </div>
     <!-- Form -->
     <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
-      <!-- PRETTY SURE I NEED TO CHANGE THE include.course_guide..... -->
       <form
         action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.course_guide_form_guid | default: school.course_guide_form_guid }}"
         target="_top"
@@ -187,36 +175,36 @@ faqs:
           <!-- End Input -->
           
           <!-- Input -->
-            <!-- htmllint preset="none" -->
-            <div
-              class="col-12"
-              amp-fx="fade-in"
-              data-duration="600ms"
-              data-margin-start="1%"
-              data-margin-end="20%"
-            >
-            <!-- htmllint preset="$previous" -->
-              <div class="form-group">
-                <label for="email-cg" class="form-label">
-                  Email <span class="text-red-a">*</span>
-                </label>
+          <!-- htmllint preset="none" -->
+          <div
+            class="col-12"
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+          >
+          <!-- htmllint preset="$previous" -->
+            <div class="form-group">
+              <label for="email-cg" class="form-label">
+                Email <span class="text-red-a">*</span>
+              </label>
 
-                <input id="email-cg"
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  placeholder="Email"
-                  required data-msg="Please enter a valid email address."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-              </div>
+              <input id="email-cg"
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="Email"
+                required data-msg="Please enter a valid email address."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
             </div>
-            <!-- End Input -->
-            
-            <!-- Input -->
-            <!-- htmllint preset="none" -->
-            <div
+          </div>
+          <!-- End Input -->
+          
+          <!-- Input -->
+          <!-- htmllint preset="none" -->
+          <div
             class="col-12"
             amp-fx="fade-in"
             data-duration="600ms"
