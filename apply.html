@@ -344,6 +344,7 @@ coding_inputs:
   small_width: "12"
   medium_width: "12"
   options: []
+isa_inputs:
 - name: describe_your_ideal_career_path
   label: Describe your ideal career path. Where do you see yourself next year? In five years?
   description: ''
@@ -428,6 +429,9 @@ coding_inputs:
             {% include referral-question.html %}
           </div>
           {% include fields.html fields=page.coding_inputs %}
+          <div id="isa-questions" class="d-none col-12 p-0">
+            {% include fields.html fields=page.isa_inputs %}
+          </div>
           <div class="mb-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
             <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
@@ -443,3 +447,24 @@ coding_inputs:
     </form>
   </div>
 </div>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#describe_your_ideal_career_path').removeAttribute('required');
+    document.querySelector('#what_is_an_income_share_agreement').removeAttribute('required');
+    document.querySelector('[name="payment_plan"]').addEventListener('change', () => { 
+      var isa = document.querySelector('[name="payment_plan"]');
+      // check for isa options' hs product
+      if(isa.value.includes('122834138') || isa.options[isa.selectedIndex].text.includes('$0 - Full Time Course')){
+        document.querySelector('#isa-questions').classList.remove('d-none');
+        document.querySelector('#describe_your_ideal_career_path').setAttribute('required', true);
+        document.querySelector('#what_is_an_income_share_agreement').setAttribute('required', true);
+      }else{
+        document.querySelector('#isa-questions').classList.add('d-none');
+        document.querySelector('#describe_your_ideal_career_path').removeAttribute('required');
+        document.querySelector('#what_is_an_income_share_agreement').removeAttribute('required');
+        document.querySelector('#describe_your_ideal_career_path').value = "";
+        document.querySelector('#what_is_an_income_share_agreement').value = "";
+      }
+    })
+  });
+</script>
