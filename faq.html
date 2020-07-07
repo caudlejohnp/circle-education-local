@@ -144,7 +144,7 @@ schools:
   categories:
   - title: Frequently Asked Questions
     faqs:
-    - question: 'Where are classes held? '
+    - question: Where are classes held?
       answer: We are now offering online classes optimized for working remotely through
         Zoom.  There has never been a better time to learn online and get into coding!
     - question: Who teaches the classes?
@@ -263,6 +263,22 @@ schools:
       answer: Students may miss no more than 2 classes per 8-week class. Classes are
         recorded, and students are expected to watch class recordings and makeup missing
         work.
+  - title: Income Share Agreements
+    faqs:
+    - question: What is an income share agreement?
+      answer:
+    - question: What if I need to change my start date?
+      answer: If you change start dates before your cohort starts, no sweat!
+        We’ll simply transfer you to your chosen start date, and update your ISA
+        contract.
+    - question: What if I change from Part-Time to Full-Time?
+      answer: The ISA contracts are different for the Part- and Full-Time
+        programs, so on a case-by-case basis you’d need to resign a new contract.
+    - question: What if I want to cancel my ISA and make payments to the school?
+      answer: Unfortunately this would not be possible after you begin classes.
+        With flexible tuition options, there’s something for everyone. If you want
+        to switch to a payment plan, pay-by-course, or student loan before your
+        cohort starts, we’d be happy to switch that for you!
 - key: lubbockcodingacademy
   categories:
   - title: Frequently Asked Questions
@@ -448,9 +464,9 @@ schools:
   {% endfor %}
 {% endif %}
 
-<div class="container mt-90 pt-1 pb-5">
+<div class="container pt-1 pb-5">
   {% for category in school.categories %}
-    <div class="my-10">
+    <div class="py-10" id="{{ category.title | replace: ' ', '' | liquify }}">
       <h2 class="font-family-alt mb-6 text-center display-5">
         {{ category.title | liquify }}
       </h2>

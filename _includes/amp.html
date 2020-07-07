@@ -62,6 +62,12 @@
 
 {% if site.baseurl == '/amp' %}
 <script async custom-element="amp-call-tracking" src="https://cdn.ampproject.org/v0/amp-call-tracking-0.1.js"></script>
+{% else %}
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 {% endif %}
 
 <script
@@ -161,9 +167,9 @@
 {% endif %}
 
 {% if page.amp_components contains 'amp-vimeo' %}
-<script 
-  async 
-  custom-element="amp-vimeo" 
+<script
+  async
+  custom-element="amp-vimeo"
   src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"
 ></script>
 {% endif %}

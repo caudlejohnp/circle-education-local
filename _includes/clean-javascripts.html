@@ -5,6 +5,10 @@
       el.value = email
     });
 
+    if (window.location.hash) {
+      setTimeout(() => document.querySelector(window.location.hash).scrollIntoView(), 1000)
+    }
+
     ['href', 'action', 'action-xhr'].forEach(attr => {
       document.querySelectorAll('[' + attr + ']').forEach(el => {
         const parser = document.createElement('a');

@@ -15,7 +15,7 @@
     {% endfor %}
   {% endif %}
 {% endfor %}
-<label class="form-label" for="payment-plan">How would you like to reserve your seat?<span class="text-red-a">*</span></label>
+<label class="form-label" for="payment-plan">How would you like to reserve your seat? <span class="text-red-a">*</span></label>
 <select class="form-control" id="payment-plan" name="payment_plan" required>
   <option value="" disabled selected>
     Please Select
@@ -31,4 +31,10 @@
       </optgroup>
     {% endif %}
   {% endfor %}
+  {% if site.key == 'austincodingacademy' %}
+    <optgroup label="Income Share Agreement">
+      <option value=",122834138,122834139,9 Month Payment Plan">$300 - Part Time Course</option>
+      <option value=",,,">$0 - Full Time Course</option>
+    </optgroup>
+  {% endif %}
 </select>
