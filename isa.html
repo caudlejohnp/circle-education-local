@@ -1,0 +1,320 @@
+---
+layout: default
+permalink: "/courses/isa/"
+title: ISA
+amp_components:
+- amp-carousel
+- amp-lightbox
+- amp-img
+- amp-recaptcha-input
+- amp-accordian
+course_guide_img: "/assets/uploads/WordPress-Fundamentals-Course-Guide-Master-Table-Content.png"
+course_guide: "/assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf"
+course_guide_form_guid: b742c715-7280-4cae-bb5a-5f47b31266fa
+redirect_from: []
+hero: js
+hero_heading: What is an ISA?
+hero_text: <h3>Lorem Ipsum Lorem Ipsum! Lorem Ipsum? Lorem Ipsum.</h3>
+info_img: '/assets/uploads/ISA_artboard.png'
+card_text: "<h4><strong>This workshop is designed for those with small
+  businesses or those wanting to start a small business. Want to get a website up
+  and maintain it yourself? This course is for you!</strong></h4>"
+card_breakdown: "<h4>Course Breakdown:</h4><ul><li><p>Day
+  1: Get your tools, Get Your Plan, Build a Website</p></li><li><p>Day 2: Host Your
+  Website</p></li><li><p>Day 3: Create Your Online Store</p></li><li><p>Day 4: Review,
+  Recap, &amp; Show Off!</p></li></ul>"
+faqs:
+- question: Where are classes held?
+  answer: We are now offering online classes optimized for working remotely through
+    Zoom.  There has never been a better time to learn online and get into coding!
+- question: Who teaches the classes?
+  answer: All of our classes are taught by professional developers currently employed
+    in the field. They code by day and teach by night. This ensures our curriculum
+    and instruction is up-to-date and aligned with current industry norms. Find
+    out more at our <a href='/instructors/'>Instructors</a> page.
+- question: What does the application process look like?
+  answer: First, you'll fill out a short application and be prompted to schedule
+    an interview with one of our Admissions Advisors to talk about your goals
+    and any questions you have. You will also have an opportunity to conditionally
+    save your spot with a refundable deposit. Your acceptance will follow that,
+    then you'll enroll and get started in your selected start date!
+- question: Who should apply?
+  answer: All of our graduates share these core qualities&#58; <br/>&#8208;&nbsp;A
+    desire to improve their life <br/>&#8208;&nbsp;Exhibit “growth mindset” <br/>&#8208;&nbsp;Willing
+    to take a risk <br/>&#8208;&nbsp;15 hrs to commit to the class and coursework
+    each week <br/>&#8208;&nbsp;Availability to attend classes <br/>If this sounds
+    like you, don’t hesitate to <a href='/apply/'>apply now!</a>
+- question: Where can I view your course starting dates?
+  answer: You may see our upcoming start dates on our home page.
+- question: Can I change my start date if I’ve already applied?
+  answer: Yes, just let us know.
+- question: I’m an employer looking to hire some developers, how do I get in touch with you?
+  answer: Check out our <a href='/hire/'>Hire a Graduate</a> page with profile links to our job-ready graduates, where you can contact potential applicants directly. You can also directly contact our <a href='mailto:dan@austincodingacademy.com'>Director of Placement &amp; Partnerships</a> for more information.
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+<!-- htmllint preset="none" -->
+<div id="" class="bg-primary-dark hero py-5 py-md-11">
+<!-- htmllint preset="$previous" -->
+  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-sm-4 text-center">
+    {{ page.hero_heading | liquify }}
+  </h1>
+  <div class="text-white mx-auto px-2 container text-center">
+    {{ page.hero_text | liquify }}
+  </div>
+
+  <div class="d-flex mt-4 align-items-center justify-content-center">
+    <div class="mr-2">
+      {% include btn-apply.html href='https://www.eventbrite.com/e/4-day-mini-bootcamp-build-a-wordpress-site-online-store-tickets-105305702190' %}
+    </div>
+  </div>
+</div>
+
+<section class="py-8 mt-4 container">
+  <h2
+    amp-fx="fade-in"
+    data-duration="600ms"
+    data-margin-start="1%"
+    data-margin-end="20%"
+    class="col-12 font-family-alt font-weight-bold text-center display-5 mb-8"
+  >
+    Download Info PDF
+  </h2>
+  <div class="row d-flex justify-content-center px-5">
+    <div class="d-none d-md-flex flex-column justify-content-center mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
+      <!-- htmllint preset="none" -->
+      <amp-img
+        class="rounded border"
+        amp-fx="fade-in"
+        data-duration="600ms"
+        data-margin-start="1%"
+        data-margin-end="20%"
+        layout="responsive"
+        width="579"
+        height="756"
+        src="{{ page.info_img }}"
+        alt="What's inside our course guide"
+      ></amp-img>
+      <!-- htmllint preset="$previous" -->
+    </div>
+    <!-- Form -->
+    <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
+      <!-- PRETTY SURE I NEED TO CHANGE THE include.course_guide..... -->
+      <form
+        action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.course_guide_form_guid | default: school.course_guide_form_guid }}"
+        target="_top"
+        method="POST"
+      >
+        <div class="form-container">
+          <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
+          <input name="downloaded_a_courses_guide" type="hidden" value="true">
+          <input name="hs_lead_status" type="hidden" value="NEW">
+          <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
+          <input name="redirect_url" type="hidden" value="{{ settings.pdf_viewer_url | liquify }}{{ PDFLINKHERE }}">
+          <input name="zollege_school_new_" type="hidden" value="{{ school.name }}">
+          <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+        </div>
+        <div class="row center-form">
+          <!-- Input -->
+          <!-- htmllint preset="none" -->
+          <div
+            class="col-6"
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+          >
+          <!-- htmllint preset="$previous" -->
+            <div class="form-group">
+              <label for="first-name-cg" class="form-label">
+                First Name <span class="text-red-a">*</span>
+              </label>
+
+              <input id="first-name-cg"
+                type="text"
+                class="form-control"
+                name="firstname"
+                placeholder="First name"
+                required data-msg="Please enter your first name."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <!-- htmllint preset="none" -->
+          <div
+            class="col-6"
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+          >
+          <!-- htmllint preset="$previous" -->
+            <div class="form-group">
+              <label for="last-name-cg" class="form-label">
+                Last Name <span class="text-red-a">*</span>
+              </label>
+
+              <input id="last-name-cg"
+                type="text"
+                class="form-control"
+                name="lastname"
+                placeholder="Last name"
+                required data-msg="Please enter your last name."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+          
+          <!-- Input -->
+            <!-- htmllint preset="none" -->
+            <div
+              class="col-12"
+              amp-fx="fade-in"
+              data-duration="600ms"
+              data-margin-start="1%"
+              data-margin-end="20%"
+            >
+            <!-- htmllint preset="$previous" -->
+              <div class="form-group">
+                <label for="email-cg" class="form-label">
+                  Email <span class="text-red-a">*</span>
+                </label>
+
+                <input id="email-cg"
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Email"
+                  required data-msg="Please enter a valid email address."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                />
+              </div>
+            </div>
+            <!-- End Input -->
+            
+            <!-- Input -->
+            <!-- htmllint preset="none" -->
+            <div
+            class="col-12"
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+          >
+          <!-- htmllint preset="$previous" -->
+            <div class="form-group">
+              <label for="phone-cg" class="form-label">
+                Phone <span class="text-red-a">*</span>
+              </label>
+
+              <input id="phone-cg"
+                type="phone"
+                class="form-control"
+                name="phone"
+                placeholder="Phone"
+                required data-msg="Please enter a valid phone number."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <div
+            class="col-12 d-flex flex-column justify-content-end mt-3"
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+          >
+          <!-- htmllint preset="$previous" -->
+            {% include referral-question.html %}
+
+          </div>
+          
+           <!-- Input -->
+          <!-- htmllint preset="none" -->
+          <div
+            class="col-12 d-flex align-items-end justify-content-center form-group"
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+          >
+          <!-- htmllint preset="$previous" -->
+            <button type="submit" class="btn {% if school.inverted != true %}btn-round{% endif %} btn-sm-block text-white bg-primary-dark hover-white">
+              Download
+            </button>
+          </div>
+          <!-- End Input -->
+        
+      </form>
+  </div>
+</section>
+<section class="my-4 container">
+  <div class="pb-5">
+    <h2 class="font-family-alt mb-8 text-center display-5">
+      Frequently Asked Questions
+    </h2>
+    <amp-accordion disable-session-states>
+      {% for faq in page.faqs %}
+        <section class="mb-3">
+          <h4 class="display-7 bg-light mb-0 px-2 p-1 rounded-top">
+            {{ faq.question | liquify }}
+          </h4>
+          <p class="text-default px-2 py-1 border border-top-0 rounded-bottom">
+            {{ faq.answer | liquify }}
+          </p>
+        </section>
+      {% endfor %}
+    </amp-accordion>
+  </div>
+</section>
+<section class="my-4 container">
+  <h2 class="font-family-alt font-weight-bold text-center display-5 mb-8">
+    Still Have Questions?
+  </h2>
+  <div class="d-flex flex-column justify-content-center">
+    {% include contact-form.html %}
+  </div>
+</section>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for faq in page.faqs %}
+        {
+          "@type": "Question",
+          "name": "{{ faq.question | liquify }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ faq.answer | liquify }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}{% unless forloop.last %},{% endunless %}
+    ]
+  }
+</script>
