@@ -1,0 +1,63 @@
+---
+layout: default
+permalink: "/locations/ttca-jefferson/"
+title: Jefferson
+amp_components:
+- amp-img
+- amp-recaptcha-input
+- amp-iframe
+redirect_from:
+- "/ttca-jefferson/"
+- "/locations/jefferson"
+- "/jefferson/"
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="container pt-1 pb-5">
+  <h2 class="font-family-alt font-weight-bold text-center display-5 my-10">
+    Texas Tech Coding Academy - Jefferson
+  </h2>
+  <amp-img height="172" width="500" layout="responsive" class="img-fluid mw-100 rounded" src="/assets/uploads/ttca-location-jefferson.png" alt="Texas Tech Jefferson location"></amp-img>
+  
+  <div class="d-flex flex-column align-items-center my-5">
+    <p>
+      <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 120 E Austin St. Jefferson, TX 75657
+    </p>
+    <p class="col-md-6">
+      We offer Full Stack Web Development & Cyber Security classes at this location. If you are interested in attending this location please feel free to apply online as we do not currently see walk-ins.
+    </p>
+    <div class="d-flex mt-4 align-items-center justify-content-center">
+      <div>
+        {% include btn-apply.html %}
+      </div>
+    </div>
+    <div class="col-6 mt-4">
+      <amp-iframe width="600"
+        height="400"
+        title="Google map pin on TTCA Jefferson"
+        layout="responsive"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+        frameborder="0"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ8QyBJxOJNoYRW-8JY7drdps&key={{ settings.google_maps_key }}
+        ">
+      </amp-iframe>
+    </div>
+  </div>
+
+</div>

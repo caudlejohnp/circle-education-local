@@ -271,19 +271,7 @@ schools:
       payment_plan_paycove_template: ''
       deposit_hubspot_product_id: 87065234
       payment_plan_hubspot_product_id: ''
-      picture: "/assets/uploads/ttcawebsite_tuitionpage_fulltuition.png"
-    - title: "{{ school.name }} Payment Plan (Budget Option)"
-      description: With our new payment plan, you can get started with Texas Tech
-        Coding Academy for just $460 up-front. After you begin classes you’ll make
-        bi-weekly payments of $225 for 22-months, for a total program cost of $10,360.
-        No interest and no penalty for prepayment!
-      price_header: Details
-      price: "$460"
-      payment_deposit: "$225 bi-weekly payments"
-      payment_plan_paycove_template: 44 Bi-week Payment Plan
-      deposit_hubspot_product_id: 87065231
-      payment_plan_hubspot_product_id: "87065236"
-      picture: "/assets/uploads/ttcawebsite_tuitionpage_paymentplan.png"
+      picture: "/assets/uploads/ttcawebsite_tuitionpage_fulltuition.png"   
     - title: Single Course (Web 101)
       description: With our new payment plan for our online course, you can get started
         with class by making a $490 deposit. After the total will be $2490 for Web
@@ -295,29 +283,17 @@ schools:
       deposit_hubspot_product_id: 87065227
       payment_plan_hubspot_product_id: ''
       picture: ''
-    - title: Finance through Climb
-      description: 'Finance your education through Climb. Click here for more information:
-        <a href="https://climbcredit.com/" target="_blank">Climb Credit</a>'
-      price_header: Details
-      price: "$150"
-      payment_deposit: "$150 Deposit"
-      payment_plan_paycove_template: ''
-      deposit_hubspot_product_id: 96688484
-      payment_plan_hubspot_product_id: ''
-      picture: "/assets/uploads/ttcawebsite_tuitionpage_climb.png"
-  - title: Mini-Bootcamps
-    tuition_options: true
-    description:
-    options:
-    - title: Pay Up Front
-      description: The total cost of the Mini-Bootcamp Course is $199
+    - title: Class by Class
+      description: With our class by class option, you can get started with Texas Tech 
+        Coding Academy by signing up for single classes. Start with Web 101 or jump into 
+        211 and complete classes on your schedule and budget.
       price_header: Total Price
-      price: "$199"
-      payment_deposit: "$199"
+      price: "$2,490"
+      payment_deposit: "$2,490 per class"
       payment_plan_paycove_template: ''
-      deposit_hubspot_product_id: 101903828
+      deposit_hubspot_product_id: 110739862
       payment_plan_hubspot_product_id: ''
-      picture: "/assets/uploads/acawebsite_tuitionpage_wordpressfulltuition_.png"
+      picture: '/assets/uploads/ttcawebsite_tuitionpage_paymentplan.png'
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
