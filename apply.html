@@ -3,7 +3,6 @@ layout: default
 permalink: "/apply/"
 amp_components:
 - amp-recaptcha-input
-amp: false
 redirect_from:
 - "/apply-two/"
 - "/application-two/"
@@ -430,9 +429,11 @@ isa_inputs:
             {% include referral-question.html %}
           </div>
           {% include fields.html fields=page.coding_inputs %}
-          <div id="isa-questions" class="d-none col-12 p-0">
-            {% include fields.html fields=page.isa_inputs %}
-          </div>
+          {% if site.key == 'austincodingacademy' %}
+            <div id="isa-questions" class="d-none col-12 p-0">
+              {% include fields.html fields=page.isa_inputs %}
+            </div>
+          {% endif %}
           <div class="mb-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
             <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
