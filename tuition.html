@@ -327,7 +327,7 @@ schools:
       <div class="row px-5 py-2 mb-5 justify-content-center">
       {% for option in section.options %}
         {% unless option.title contains 'Single Course' %}
-          <div class="col-sm-6 col-md-3 border p-2 mx-4 d-flex flex-column justify-content-between">
+          <div class="col-sm-6 col-md-3 border p-2 mx-4 d-flex flex-column justify-content-between mt-4">
             <div class="shadow py-3 bg-light">
               {% if option.picture != '' %}
                 <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
