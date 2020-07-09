@@ -242,7 +242,17 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
             </button>
           </div>
           <!-- End Input -->
-
+          
+          <div class="col-12">
+            {% include data-agreement.html text_class=text_class %}
+          </div>
+          <div class="text-center">
+          <div submit-error>
+            <template type="amp-mustache">
+              <p class="text-danger">There was an error with your request. Please try again.</p>
+            </template>
+          </div>
+        </div>
       </form>
   </div>
 </section>
