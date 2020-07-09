@@ -352,7 +352,11 @@ schools:
             </div>
             <div class="mt-6 {%if school.inverted %}px-6{% endif %} d-flex justify-content-center pb-5">
               <div class="col-2 d-flex justify-content-center">
-                {% include btn-apply.html %}
+                {% if option.title == 'ISA' %}
+                  {% include btn-apply.html href="/tuition/isa/" %}
+                {% else %}
+                  {% include btn-apply.html %}
+                {% endif %}
               </div>
             </div>
           </div>
