@@ -257,7 +257,7 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
         {% for _school in faq_page.schools %}
           {% if _school.key == site.key %}
             {% for category in _school.categories %}
-              {% if category.title == 'Frequently Asked Questions' %}
+              {% if category.title == 'Income Share Agreements' %}
                 {% assign faqs = category.faqs %}
               {% endif %}
             {% endfor %}
