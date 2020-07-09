@@ -256,7 +256,7 @@ info_img: '/assets/uploads/ISA_artboard.png'
         {% for _school in faq_page.schools %}
           {% if _school.key == site.key %}
             {% for category in _school.categories %}
-              {% if category.title == 'Frequently Asked Questions' %}
+              {% if category.title == 'Income Share Agreements' %}
                 {% assign faqs = category.faqs %}
               {% endif %}
             {% endfor %}
