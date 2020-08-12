@@ -27,7 +27,7 @@ img: "/assets/uploads/untitled-design-2-1.png"
 
 \*Original publication can be found on Medium - written by [Bilal Rifas](https://medium.com/@bilal.rifas?source=post_page-----cbc5a6781570----------------------)
 
-[https://medium.com/javascript-in-plain-english/spacexs-crew-dragon-touchscreen-is-powered-by-javascript-cbc5a6781570](https://medium.com/javascript-in-plain-english/spacexs-crew-dragon-touchscreen-is-powered-by-javascript-cbc5a6781570 "https://medium.com/javascript-in-plain-english/spacexs-crew-dragon-touchscreen-is-powered-by-javascript-cbc5a6781570") 
+[https://medium.com/javascript-in-plain-english/spacexs-crew-dragon-touchscreen-is-powered-by-javascript-cbc5a6781570](https://medium.com/javascript-in-plain-english/spacexs-crew-dragon-touchscreen-is-powered-by-javascript-cbc5a6781570 "https://medium.com/javascript-in-plain-english/spacexs-crew-dragon-touchscreen-is-powered-by-javascript-cbc5a6781570")
 
 The mission is known as Demo-2, NASA Astronauts Robert “Bob” Behnken and Douglas “Doug” Hurley traveled aboard Dragon a top a Falcon 9 rocket, which lifted off from Launch Pad 39A at the Kennedy Space Center in Cape Canaveral, Florida.
 
@@ -39,7 +39,7 @@ All of this is achieved through software created by teams of engineers who code 
 
 The Dragon spacecraft’s cockpit consists of a trio of touchscreens. NASA Astronauts Behnken and Hurley tested the software during their recent voyage to the Space Station. The craft only has a few buttons that are to trigger emergency operations. Dragon’s displays provide real-time information on anything from its position in space, to possible destinations, and the environment onboard. A simple tap on a screen is capable of igniting Dragon’s integrated space thrusters to alter the craft’s direction.
 
-![Image for post](https://miro.medium.com/max/1920/1*rSc2z2P8rGXP_W-1oP0HsA.png =960x665)
+![](/assets/uploads/space1.png)
 
 Photo by [SpaceX](https://unsplash.com/@spacex?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
@@ -49,7 +49,7 @@ It’s known that Crew Dragon displays are running Chromium and JS. Is it using 
 
 > _Yes, they use Chromium and they do use a reactive library that they developed in house._
 
-![Image for post](https://miro.medium.com/max/6000/0*zV16xlyhpKxowDlt =3000x2000)
+![](/assets/uploads/space2.jpeg)
 
 Photo by [SpaceX](https://unsplash.com/@spacex?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
@@ -61,13 +61,13 @@ They take reliability & performance very seriously, and just like other vehicle 
 
 # Is the Docking Simulator developed by the Crew Displays Software Team itself?
 
-![Image for post](https://miro.medium.com/max/6000/0*sVhIirYK-RdJzKMb =3000x2000)
+![](/assets/uploads/space3.jpeg)
 
 Photo by [SpaceX](https://unsplash.com/@spacex?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
 SpaceX engineer Jeff replied stated that “The docking simulator is completely separate code from what’s actually in the Crew displays, though it was developed by their Crew displays team. It started out as a fun project from Shane Mielke and Mike Westenhaver before they decided to finish it up and put it on the web before Demo-2.”
 
-![Image for post](https://miro.medium.com/max/2400/1*-P7GmdQoGMtOGV-YjjvG8Q.gif =1200x1200)
+![](/assets/uploads/space4.gif)
 
 Gif by [SpaceX](https://www.spacex.com/) on [SpaceX](https://www.spacex.com/)
 
@@ -77,7 +77,7 @@ In some shots of mission control, it’s noticeable that UI is very similar to t
 
 SpaceX Engineer Jeff responded that “They can and do run the exact same code that’s on the Crew displays on the ground. The only limitation is that they don’t necessarily get all of the same telemetry that they have in the cockpit on the ground due to limitations in our RF budget. They could but they generalize prioritize getting other critical telemetry instead.”
 
-![Image for post](https://miro.medium.com/max/2000/1*H5-8jm7zNw7aQy-_TP489w.jpeg =1000x563)
+![](/assets/uploads/space5.jpeg)
 
 Photo by [SpaceX](https://unsplash.com/@spacex?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
