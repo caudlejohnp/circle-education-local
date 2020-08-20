@@ -365,6 +365,47 @@ isa_inputs:
   small_width: "12"
   medium_width: "12"
   options: []
+ttca_scholarship_fields:
+- name: what_ways_would_the_tt_scholarship_assist_you_
+  label: In what ways would being the winner of the Texas Tech Scholarship assist you financially?
+  description: ''
+  type: textarea
+  value: ''
+  placeholder:
+  required: true
+  small_width: "12"
+  medium_width: "12"
+  options: []
+- name: what_have_you_done_for_career_in_coding
+  label: What have you done in the past to work towards a career in coding?
+  description: ''
+  type: textarea
+  value: ''
+  placeholder:
+  required: true
+  small_width: "12"
+  medium_width: "12"
+  options: []
+- name: how_will_give_back
+  label: Once graduated, how will you use what you've accomplished to give back to the community?
+  description: ''
+  type: textarea
+  value: ''
+  placeholder:
+  required: true
+  small_width: "12"
+  medium_width: "12"
+  options: []
+- name: grit
+  label: "Successful students have one thing in common: grit. Describe a challenge you've overcome in your life in the pursuit of a goal and how it impacted you."
+  description: ''
+  type: textarea
+  value: ''
+  placeholder:
+  required: true
+  small_width: "12"
+  medium_width: "12"
+  options: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -434,7 +475,17 @@ isa_inputs:
               {% include fields.html fields=page.isa_inputs %}
             </div>
           {% endif %}
-          <div class="mb-4 d-flex flex-column align-items-center">
+          {% if site.key == 'texastechcodingacademy' %}
+            <div class="row align-items-center mb-4">
+              <input id="scholarship-checkbox" name="scholarship-checkbox" type="checkbox">
+              <label class="mb-0 mx-2" for="scholarship-checkbox">Would you like to opt out of the scholarship?</label>
+            </div>
+            <div id="ttca-scholarship-fields">
+              <h4 class="text-center"><b>***Scholarship application deadline!!! - September 21, 2020 at 12pm</b></h4>
+              {% include fields.html fields=page.ttca_scholarship_fields %}
+            </div>
+          {% endif %}
+          <div class="my-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
             <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
             <!-- htmllint preset="$previous" -->
@@ -471,4 +522,25 @@ isa_inputs:
     })
   });
 </script>
+{% endif %}
+{% if site.key == 'texastechcodingacademy' %}
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#scholarship-checkbox').addEventListener('change', () => {   
+        if(document.querySelector('#scholarship-checkbox').checked == false){  
+          document.querySelector('#ttca-scholarship-fields').classList.remove('d-none');
+          document.querySelector('#what_ways_would_the_tt_scholarship_assist_you_').setAttribute('required', true)
+          document.querySelector('#what_have_you_done_for_career_in_coding').setAttribute('required', true)
+          document.querySelector('#how_will_give_back').setAttribute('required', true)
+          document.querySelector('#grit').setAttribute('required', true)
+        }else{
+          document.querySelector('#ttca-scholarship-fields').classList.add('d-none');
+          document.querySelector('#what_ways_would_the_tt_scholarship_assist_you_').removeAttribute('required')
+          document.querySelector('#what_have_you_done_for_career_in_coding').removeAttribute('required')
+          document.querySelector('#how_will_give_back').removeAttribute('required')
+          document.querySelector('#grit').removeAttribute('required')
+        }
+      })
+    })
+  </script>
 {% endif %}
