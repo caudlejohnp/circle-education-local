@@ -366,7 +366,7 @@ isa_inputs:
   medium_width: "12"
   options: []
 ttca_scholarship_fields:
-- name: what_ways_would_the_tt_scholarship_assist_you_
+- name: in_what_ways_would_being_the_winner_of_the_texas_tech_scholarship_assist_you_financially_
   label: In what ways would being the winner of the Texas Tech Scholarship assist you financially?
   description: ''
   type: textarea
@@ -376,7 +376,7 @@ ttca_scholarship_fields:
   small_width: "12"
   medium_width: "12"
   options: []
-- name: what_have_you_done_for_career_in_coding
+- name: what_have_you_done_in_the_past_to_work_towards_a_career_in_coding_
   label: What have you done in the past to work towards a career in coding?
   description: ''
   type: textarea
@@ -386,7 +386,7 @@ ttca_scholarship_fields:
   small_width: "12"
   medium_width: "12"
   options: []
-- name: how_will_give_back
+- name: once_graduated_how_will_you_use_what_you_ve_accomplished_to_give_back_to_the_community_
   label: Once graduated, how will you use what you've accomplished to give back to the community?
   description: ''
   type: textarea
@@ -396,7 +396,7 @@ ttca_scholarship_fields:
   small_width: "12"
   medium_width: "12"
   options: []
-- name: grit
+- name: successful_students_have_one_thing_in_common_grit_describe_a_challenge_you_ve_overcome_in_your_life
   label: "Successful students have one thing in common: grit. Describe a challenge you've overcome in your life in the pursuit of a goal and how it impacted you."
   description: ''
   type: textarea
@@ -526,8 +526,8 @@ ttca_scholarship_fields:
 {% if site.key == 'texastechcodingacademy' %}
   <script>
     window.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('#scholarship-checkbox').addEventListener('change', () => {   
-        if(document.querySelector('#scholarship-checkbox').checked == false){  
+      document.querySelector('#scholarship-checkbox').addEventListener('change', () => {
+        if(document.querySelector('#scholarship-checkbox').checked == false){
           document.querySelector('#ttca-scholarship-fields').classList.remove('d-none');
           document.querySelector('#what_ways_would_the_tt_scholarship_assist_you_').setAttribute('required', true)
           document.querySelector('#what_have_you_done_for_career_in_coding').setAttribute('required', true)
