@@ -1,0 +1,28 @@
+---
+layout: default
+permalink: "/sallie-mae/"
+redirect_from: []
+
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+<div class="text-center">
+  <h1>Sallie Mae Information</h1>
+  <h4>What you need to know and how to apply</h4>
+</div>
+<div>
+  <p>
+    <a href="https://www.salliemae.com/about/">Sallie Mae</a> is a financial institution that specializes in private student loans for colleges and schools across the country. Their loans are flexible, where you can choose the length, amount, and when you begin paying monthly to get yourself the rate that fits your budget. 
+  </p>
+  <p>
+    If you want to put down a large down payment and finance the remainder of tuition, you can do that. If you want to finance your entire tuition plus expenses, and only pay interest or $25/mo until you finish your program, you can do that, too. 
+  </p>
+</div>
