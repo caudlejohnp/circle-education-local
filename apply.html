@@ -419,6 +419,17 @@ ttca_scholarship_fields:
 {% endfor %}
 <div class="container mt-4 pt-1 pb-5">
   <div class="d-flex flex-column align-items-center">
+    {% if site.key == 'texastechcodingacademy' %}
+      <h4 class=" mt-5 mt-sm-10 text-center">
+        Ready for your future career in coding? Fill out our application below and take a shot at applying 
+        for the Texas Tech Full Stack Scholarship for our September 28th Class!
+      </h4>
+      <p class="mb-5 mt-3 text-center col-md-9">
+        We are so excited to have you begin this process! As a special treat to all who are interested in 
+        becoming a web developer through Texas Tech Coding Academy, we are offering a scholarship to one lucky 
+        winner! <b>Scholarship application deadline is September 8, 2020 at 11:59 PM</b>
+      </p>
+    {% endif %}
     <h2 class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
       {{ page.admission_heading }}
     </h2>
