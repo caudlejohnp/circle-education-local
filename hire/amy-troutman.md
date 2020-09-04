@@ -50,12 +50,12 @@ education:
     dates: "October 2019 - September 2020"
     degree: "Web Development"
   - name: "University of Mary Hardin-Baylor"
-    dates: "2004 - 2007
+    dates: "2004 - 2007"
     degree: "BFA w/Emphasis in Graphic Design and Advertising"
 
 projects:
   - name: "Bookalog" # project title
-    desc: "An app to help you remember the books you own and what happened in those books, for people like me who forget even the really big plot points." # short description of what project does
+    desc: "An app to help you remember the books you own and what happened in those books, for people like me who forget even the really big plot points." # short description of what project does"
     url: "bookalog.azurewebsites.net" # link to your deployed project
 
 ---
