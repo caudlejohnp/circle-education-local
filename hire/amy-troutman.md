@@ -49,7 +49,7 @@ education:
   - name: "Lubbock Coding Acaademy"
     dates: "October 2019 - September 2020"
     degree: "Web Development"
-  - name: "University of Mary Hardin-Baylor
+  - name: "University of Mary Hardin-Baylor"
     dates: "2004 - 2007
     degree: "BFA w/Emphasis in Graphic Design and Advertising"
 
