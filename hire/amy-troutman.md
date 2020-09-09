@@ -56,6 +56,6 @@ education:
 projects:
   - name: "Bookalog" # project title
     desc: "An app to help you remember the books you own and what happened in those books, for people like me who forget even the really big plot points." # short description of what project does"
-    url: "bookalog.azurewebsites.net" # link to your deployed project
+    url: "http://bookalog.azurewebsites.net" # link to your deployed project
 
 ---
