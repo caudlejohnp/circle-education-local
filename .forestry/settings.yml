@@ -21,7 +21,7 @@ build:
   preview_env:
   - JEKYLL_ENV=staging
   preview_output_directory: _site
-  install_dependencies_command: yarn && bundle install --path vendor/bundle
+  install_dependencies_command: npm i && bundle install --path vendor/bundle
   preview_docker_image: forestryio/ruby:2.6-node10
   mount_path: "/srv"
   instant_preview_command: node _javascripts/postcss.js && cat assets/css/main.min.css

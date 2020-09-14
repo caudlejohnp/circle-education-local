@@ -16,7 +16,7 @@ exclude:
   - vendor/ruby/
   - faviconData.json
   - package.json
-  - yarn.lock
+  - package-lock.json
   - README.md
   - '*.orig'
   - '*.log'

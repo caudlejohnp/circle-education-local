@@ -22,13 +22,15 @@ layout: default
 <main id="content" role="main" class="mt-90">
   <!-- Description Section -->
   <div class="container space-top-1 d-flex flex-column">
-    <amp-img
-      src="{{ page.img | liquify }}"
-      class="w-100 w-lg-80 mx-auto"
-      layout="responsive"
-      height="172"
-      alt="{{ page.alt | liquify }}"
-    ></amp-img>
+    {% if page.img != nil and page.img != '' %}
+      <amp-img
+        src="{{ page.img | liquify }}"
+        class="w-100 w-lg-80 mx-auto"
+        layout="responsive"
+        height="172"
+        alt="{{ page.alt | liquify }}"
+      ></amp-img>
+    {% endif %}
     <div class="w-lg-80 mx-auto space-top-1">
       <h1 class="font-weight-bold">
         {{ page.head_title | liquify }}

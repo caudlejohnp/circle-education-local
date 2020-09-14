@@ -87,18 +87,18 @@ successes:
 - name: Student Brian
   title: Software Engineer
   company: Dell
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 - name: Student Jessica
   title: Web Developer
   company: IBM
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 - name: Student Bobby
   title: UI Developer
   company: Indeed
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 features:
 - heading: The World’s Top Programming Languages
   text: These languages and frameworks are in the top technologies used, with JavaScript
@@ -335,7 +335,93 @@ schools:
   - code: Job 501
     sections: []
   tuition_options: []
-
+- key: stedwardscodingacademy
+  next_start_date: Monday, July 13th
+  backend: Node.js/Express.js
+  courses:
+  - code: Web 101
+    sections:
+    - start: May 29, 2019
+      end: July 24, 2019
+      weekdays: Mondays &amp; Wednesdays
+      time: 6:30pm - 9:00pm
+      location: Capital Factory
+    - start: June 25, 2019
+      end: August 22, 2019
+      weekdays: Tuesdays &amp; Thursdays
+      time: 6:30pm - 9:00pm
+      location: Highland Business Center
+  - code: JS 211
+    sections:
+    - start: July 29, 2019
+      end: September 25, 2019
+      weekdays: Mondays &amp; Wednesdays
+      time: 6:30pm - 9:00pm
+      location: Capital Factory
+    - start: September 24, 2019
+      end: 'October 17, 2019 '
+      weekdays: Tuesdays &amp; Thursdays
+      time: 6:30pm - 9:00pm
+      location: Highland Business Center
+  - code: JS 311
+    sections:
+    - start: September 30, 2019
+      end: November 20, 2019
+      weekdays: Mondays &amp; Wednesdays
+      time: 6:30pm - 9:00pm
+      location: 'Downtown Capital Factory Campus '
+    - start: October 22, 2019
+      end: December 19, 2019
+      weekdays: Tuesdays &amp; Thursdays
+      time: 6:30pm - 9:00pm
+      location: Highland Business Center
+  - code: JS 411
+    sections:
+    - start: December 2, 2019
+      end: February 5, 2020
+      weekdays: Mondays &amp; Wednesdays
+      time: 6:30pm - 9:00pm
+      location: Capital Factory
+    - start: January 6, 2020
+      end: February 27, 2020
+      weekdays: Tuesdays &amp; Thursdays
+      time: 6:30pm - 9:00pm
+      location: Highland Business Center
+  - code: Job 501
+    sections:
+    - start: February 10, 2020
+      end: March 4, 2020
+      weekdays: Mondays &amp; Wednesdays
+      time: 6:30pm - 9:00pm
+      location: Capital Factory
+    - start: March 9, 2020
+      end: April 2, 2020
+      weekdays: Tuesdays &amp; Thursdays
+      time: 6:30pm - 9:00pm
+      location: Highland Business Center
+  tuition_options:
+  - title: Austin Coding Academy Payment Plan (Budget Option)
+    description: With our new payment plan, you can get started with class by making
+      a $1,000 deposit. After that you'll make bi-weekly payments of $250 for 22 months.
+      No interest and no penalty for prepayment!
+    price_header: Total Price
+    price: "$12,750"
+    price2: "$250"
+  - title: Pay Up Front (Savings Option)
+    description: Save $1,000 on the cost of the Full Stack Web Development Track when
+      you choose to pay for the entire cost of the program up front. Instead of paying
+      for the individual price of 4 web development courses, ($11,960), you’ll pay
+      the reduced price of $10,960.
+    price_header: Total Price
+    price: "$10,960"
+  - title: Apply to Join the Full Stack Web Development Track
+    description: Submit your short 5-minute application to Austin Coding Academy’s
+      Full Stack Web Development Track and discuss tuition with a follow-up call with
+      your admissions advisor.
+    button: Apply
+    url: "/apply"
+    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark
+      hover-white center mt-4
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}

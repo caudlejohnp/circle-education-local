@@ -12,7 +12,7 @@ assets/css/main.min.css
 assets/css/main.min.css.map
 _includes/css.html
 assets/css/main.min.css.map
-package-lock.json
+yarn.lock
 .env
 _data/events.yml
 _data/tutors.yml
@@ -20,3 +20,4 @@ _data/tutors.yml
 *.webp
 _configs
 tmp
+vendor

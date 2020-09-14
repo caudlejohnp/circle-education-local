@@ -7,32 +7,32 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
   mkdir _data
   node _javascripts/events.js
   node _javascripts/tutoring.js
-  yarn images
-  yarn configs
+  npm run images
+  npm run configs
   node _javascripts/github.js
-  # KEY=austincodingacademy.com yarn jekyll-build-amp
-  # yarn optimize
-  # yarn css
+  # KEY=austincodingacademy.com npm run jekyll-build-amp
+  # npm run optimize
+  # npm run css
   ITER=0
   for file in ./_configs/*; do
     if [[ -f $file ]] && [[ $(($ITER % $CIRCLE_NODE_TOTAL)) == $CIRCLE_NODE_INDEX ]]; then
       export KEY=$(echo $file | sed "s/^.\/_configs\/\(.*\).yml$/\1/")
-      yarn jekyll-build-amp
-      yarn optimize
-      yarn css
-      yarn jekyll-build
-      yarn favicon
-      if [ "${CIRCLE_BRANCH}" == "master" ]; then yarn sitemap; fi
-      yarn jekyll-build
-      yarn jekyll-build-amp
-      yarn optimize
-      if [ "${CIRCLE_BRANCH}" == "preview" ]; then yarn encrypt; fi
+      npm run jekyll-build-amp
+      npm run optimize
+      npm run css
+      npm run jekyll-build
+      npm run favicon
+      if [ "${CIRCLE_BRANCH}" == "master" ]; then npm run sitemap; fi
+      npm run jekyll-build
+      npm run jekyll-build-amp
+      npm run optimize
+      if [ "${CIRCLE_BRANCH}" == "preview" ]; then npm run encrypt; fi
       if [[ "${KEY}" == "austincodingacademy.com" ]] && [[ "${CIRCLE_BRANCH}" == "master" ]]
       then
         sudo apt install rsync
         rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
       else
-        yarn deploy
+        npm run deploy
       fi
     fi
     ((ITER++))

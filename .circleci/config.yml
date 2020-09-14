@@ -37,16 +37,16 @@ jobs:
             echo 'nvm alias default v8.16.0' >> $BASH_ENV
       - restore_cache:
           keys:
-            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-v1-{{ .Branch }}-
-            - yarn-packages-v1-
-      - run: yarn install --frozen-lockfile
+            - npm-packages-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-packages-v1-{{ .Branch }}-
+            - npm-packages-v1-
+      - run: npm install --frozen-lockfile
       - save_cache:
           paths:
             - node_modules
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: npm-packages-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
 
-      # - run: yarn test
+      # - run: npm test
       - run: ./deploy.sh
 
 
