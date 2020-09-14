@@ -20,3 +20,4 @@ _data/tutors.yml
 *.webp
 _configs
 tmp
+vendor
