@@ -12,7 +12,7 @@
     "deploy": "yarn cname && gh-pages --repo git@github.com:AustinCodingAcademy/$(echo $JEKYLL_ENV)$(echo $KEY).git -d ./_site -t",
     "encrypt": "set -e && find ./_site -type f -name '*.html' -exec staticrypt -f _javascripts/password_template.html {} $PASSWORD -o {} \\;",
     "favicon": "real-favicon generate _site/favicon.json faviconData.json assets/favicons/ && yarn favicon-inject",
-    "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
+    "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && sed -i'.original' -e 's/<html><head>//g' assets/favicons/favicon.html && sed -i'.original' -e 's/<\\/head><body><\\/body><\\/html>//g' assets/favicons/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
     "html": "posthtml -c .posthtmlrc && sleep 4 && posthtml -c .posthtmlrc_2",
     "images": "imagemin assets/uploads/* --out-dir=assets/uploads/ && imagemin assets/uploads/* --out-dir=assets/uploads/ --plugin=webp",
     "jekyll-build": "bundle exec jekyll build --config _config.yml,_configs/$KEY.yml",
