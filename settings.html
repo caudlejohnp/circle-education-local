@@ -1163,6 +1163,7 @@ schools:
   course_guide_online: ''
 - key: stedwardscodingacademy
   active: true
+  inverted: true
   name: Austin Coding Academy
   preapplication_form_guid: 8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab
   application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
@@ -1206,7 +1207,8 @@ schools:
       target: true
     - title: Apply
       url: "/apply/"
-      class: btn btn-round text-white cta-gradient py-1 px-6
+      class: btn {% if school.inverted != true %}btn-round{% endif %} text-white cta-gradient
+        py-1 px-6
     footer: []
   tracks:
   - name: Web Development - In person
