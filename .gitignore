@@ -12,6 +12,7 @@ assets/css/main.min.css
 assets/css/main.min.css.map
 _includes/css.html
 assets/css/main.min.css.map
+yarn.lock
 .env
 _data/events.yml
 _data/tutors.yml
