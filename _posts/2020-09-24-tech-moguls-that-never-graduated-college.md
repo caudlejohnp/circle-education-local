@@ -235,7 +235,7 @@ Diller grew up in Beverly Hills, and attended UCLA in nearby Los Angeles for col
 Paul Allen --- cofounder, Microsoft
 ---------------------------------
 
-![](/assets/uploads/paul-allen.com)
+![](/assets/uploads/paul-allen.jpg)
 
 Steve Dykes / Getty Images
 
