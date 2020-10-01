@@ -187,12 +187,12 @@ fields:
   - name: logo
     type: file
     config:
-      maxSize: 250
+      maxSize: 64
     label: logo
   - name: seal
     type: file
     config:
-      maxSize: 250
+      maxSize: 64
     label: seal
   - type: number
     name: phone
@@ -262,18 +262,23 @@ fields:
   - type: text
     name: instagram
     label: instagram
+  - name: linkedin_pixel
+    type: text
+    config:
+      required: false
+    label: linkedin_pixel
   - type: file
     name: course_guide
     label: course_guide
   - name: course_guide_online
     type: file
     config:
-      maxSize: 250
+      maxSize: 64
     label: course_guide_online
   - name: course_guide_img
     type: file
     config:
-      maxSize: 250
+      maxSize: 64
     label: course_guide_img
   - type: field_group_list
     name: locations
