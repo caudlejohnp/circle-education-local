@@ -74,14 +74,16 @@
 {% include google-tag-manager-head.html %}
 
 {% if site.baseurl == '/amp' %}
-  {% if page.canonical_link != nil %}
+  {% if page.canonical_link != nil and page.canonical_link != '' %}
     <link rel="canonical"  href="{{ page.canonical_link }}">
   {% else %}
     <link rel="canonical" href="{% include school-url.html %}{{ page.url }}">
   {% endif %}
 {% else %}
   <link rel="amphtml" href="{% include school-url.html %}/amp{{ page.url }}">
-  {% if page.canonical_link != nil %}
+  {% if page.canonical_link != nil and page.canonical_link != '' %}
     <link rel="canonical"  href="{{ page.canonical_link }}">
+  {% else %}
+    <link rel="canonical" href="{% include school-url.html %}{{ page.url }}">
   {% endif %}
 {% endif %}

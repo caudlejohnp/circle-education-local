@@ -431,6 +431,24 @@ a {
   }
 }
 
+#hero-st-edwards {
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
+    url('/assets/uploads/austin-coding-academy-st-edwards-university-1601573585.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero-st-edwards {
+    background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
+      url('/assets/uploads/austin-coding-academy-st-edwards-university-1601573585.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 #hero-blog {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/uploads/dan-blog.jpg');
