@@ -428,7 +428,7 @@ schools:
   <!-- htmllint preset="$previous" -->
     <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html fade=true %}
+        {% include course-guide-form.html fade=true course_guide_href="/assets/uploads/ACA-at-StEdwardUniversity_CourseGuide.pdf" course_guide_img="/assets/uploads/ACA-St-Edwards-University_Cover-Photo.png" %}
       </div>
     </div>
   </section>
@@ -546,10 +546,8 @@ schools:
                 <!-- Find first start date of correct course type -->
                 {% assign next_start_date = "" %}
                 {% for start_date in school.start_dates %}
-                  {% if start_date.course == "Full Stack Web Development" and next_start_date == "" %}
-                    {% unless start_date.location contains "Online" %}
-                      {% assign next_start_date = start_date %}
-                    {% endunless %}
+                  {% if start_date.location == "St. Edward's University" and next_start_date == "" %}
+                    {% assign next_start_date = start_date %}
                   {% endif %}
                 {% endfor %}
                 {% if next_start_date.days contains "/" %}
