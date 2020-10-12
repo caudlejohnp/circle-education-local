@@ -28,7 +28,7 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
       if [[ "${KEY}" == "austincodingacademy.com" ]] && [[ "${CIRCLE_BRANCH}" == "master" ]]; then
         sed -i.new 's/="\//="https:\/\/austincodingacademy.com\//' _site/locations/st-edwards/index.html
         mv _site/locations/st-edwards/index.html.new _site/locations/st-edwards/index.html
-        sed -i.new 's/url(\()\//url(\()https:\/\/austincodingacademy.com\//' _site/locations/st-edwards/index.html
+        sed -i.new 's/url\x28\//url\x28https:\/\/austincodingacademy.com\//' _site/locations/st-edwards/index.html
         mv _site/locations/st-edwards/index.html.new _site/locations/st-edwards/index.html
         echo "aca.stedwards.edu" >> _site/locations/st-edwards/CNAME
         npx gh-pages -d _site/locations/st-edwards/ -r git@github.com:CircleEducation/aca.stedwards.edu.git
