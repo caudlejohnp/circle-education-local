@@ -140,7 +140,7 @@
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
             {% for item in navigation %}
-              <li class="nav-item u-header__nav-item ml-5 py-3">
+              <li class="nav-item u-header__nav-item ml-4 py-3">
               {% if item.links.size > 0 %}
                 <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
                   {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
@@ -173,7 +173,7 @@
                   {% endfor %}
                 </ul>
                 {% elsif item.title == 'Courses' %}
-                  <span class="{% if school.inverted != true %}text-white hover-white{% endif %}"> 
+                  <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
                     {% if school.tracks.size == 1 %}Course{% else %}{{ item.title | liquify }}{% endif %} <i class="fas fa-caret-down"></i>
                   </span>
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
@@ -214,7 +214,7 @@
                           <!-- htmllint preset="none" -->
                           <a class="p-0" href="{{ track.url }}">
                             <!-- htmllint preset="$previous" -->
-                            <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
+                            <span class="{% if school.inverted != true %}text-white{% endif %}">
                               {{ track.name | liquify }}
                             </span>
                           </a>
@@ -224,9 +224,9 @@
                   </ul>
                 {% else %}
                   <!-- htmllint preset="none" -->
-                  <a class="{{ item.class | liquify }} hover-white {% if page.hide_apply and item.title == 'Apply' %} {{ page.hide_apply }}{% endif%}" href="{{ item.url | liquify }}">
+                  <a class="{% if school.inverted != true %}hover-white text-white{% else %}text-dark{% endif %} {{ item.class | liquify }} {% if page.hide_apply and item.title == 'Apply' %} {{ page.hide_apply }}{% endif%}" href="{{ item.url | liquify }}">
                   <!-- htmllint preset="$previous" -->
-                    <span class="{% if school.inverted != true or site.key != 'circlecoding.com' %}hover-white text-white{% else %}text-primary-dark{% endif %}">{{ item.title | liquify }}</span>
+                    <span>{{ item.title | liquify }}</span>
                   </a>
               {% endif %}
               </li>
