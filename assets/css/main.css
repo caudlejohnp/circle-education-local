@@ -131,6 +131,10 @@ a {
   color: #cccccc;
 }
 
+.text-dark {
+  color: rgb(48, 49, 51);
+}
+
 .link-underlined,
 .link-underlined:hover {
   text-decoration: underline;
@@ -288,13 +292,10 @@ a {
 .nav-item a:hover,
 #sidebar a:hover,
 .cta-gradient:hover {
-  color: #ffffff;
   cursor: pointer;
 }
 
 .btn-link:hover, .hover-white:hover {
-  color: #ffffff;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.75);
   cursor: pointer;
 }
 
@@ -425,6 +426,24 @@ a {
   #hero-js {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
       url('/assets/uploads/hero-javascript.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+#hero-st-edwards {
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
+    url('/assets/uploads/austin-coding-academy-st-edwards-university-1601573585.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero-st-edwards {
+    background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
+      url('/assets/uploads/austin-coding-academy-st-edwards-university-1601573585.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

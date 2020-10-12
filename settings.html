@@ -57,8 +57,6 @@ navigation:
     class: btn {% if school.inverted != true %}btn-round{% endif %} text-white cta-gradient
       py-1 px-6
   footer:
-  - title: Hack Overflow
-    url: https://austincodingacademy.com/forum
   - title: Upcoming Events
     url: "/events/"
   - title: Tutoring
@@ -327,15 +325,16 @@ schools:
   linkedin_pixel: ''
 - key: austincodingacademy
   active: true
+  inverted: true
   name: Austin Coding Academy
   preapplication_form_guid: 8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab
   application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
   acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=3203565
   getaccept_entity_id: rp3455kn
-  primary_light_color: rgb(0, 179, 209)
-  primary_dark_color: rgb(45, 47, 119)
-  secondary_light_color: rgb(130, 202, 156)
-  secondary_dark_color: rgb(0, 179, 209)
+  primary_light_color: rgb(106, 213, 234)
+  primary_dark_color: rgb(0, 77, 142)
+  secondary_light_color: rgb(238, 82, 69)
+  secondary_dark_color: rgb(106, 213, 234)
   hero_overlay_color: rgb(45, 47, 119)
   navigation:
     header:
@@ -344,6 +343,14 @@ schools:
       class: ''
     - title: Tuition
       url: "/tuition/"
+      class: ''
+    - title: Locations
+      links:
+      - title: Full Stack Online
+        url: "/courses/web-development-online/"
+      - title: St. Edward's University
+        url: "/locations/st-edwards/"
+      url: ''
       class: ''
     - title: Events
       url: "/events/"
@@ -370,7 +377,7 @@ schools:
       target: true
     - title: Apply
       url: "/apply/"
-      class: btn btn-round text-white cta-gradient py-1 px-6
+      class: btn btn-round bg-secondary-light text-white py-1 px-6
     footer: []
   tracks:
   - name: Web Development - In person
@@ -541,45 +548,6 @@ schools:
     - link: https://www.linkedin.com/in/daniel-cumming/
       icon: fab fa-linkedin
       hex: "#0077b5"
-  - name: Nai Obeid
-    title: Compliance &amp; Design
-    email: nai@austincodingacademy.com
-    bio: I&#8217;m a graphic designer from Lebanon. I moved here 9 years ago for a
-      new adventure and I&#8217;ve been lucky to call Austin home since. When I&#8217;m
-      not at work, I&#8217;m usually at one of Austin&#8217;s many amazing coffee
-      shops, making art or planning my next trip or both. Creating beautiful things
-      is my passion. Being at ACA allows me to do what I love everyday, surrounded
-      by the best team.
-    links:
-    - link: mailto:nai@austincodingacademy.com
-      icon: fas fa-at
-      hex: "#303133"
-    - link: https://naio-experimental.tumblr.com/
-      icon: fas fa-home
-      hex: "#303133"
-    - link: https://www.linkedin.com/in/dotthenai/
-      icon: fab fa-linkedin
-      hex: "#0077b5"
-    - link: https://www.instagram.com/naio.design/
-      icon: fab fa-instagram
-      hex: "#f00075"
-  - name: Clayton Berger
-    title: Senior Academic Manager
-    email: clayton@austincodingacademy.com
-    bio: Artistic flair paired with technical deftness. I&#8217;m a teacher turned
-      programmer that loves code and wants all of my students to fall in-love with
-      it too. My mission at ACA is make everyone around me better by making myself
-      better each day!
-    links:
-    - link: mailto:clayton@austincodingacademy.com
-      icon: fas fa-at
-      hex: "#303133"
-    - link: https://linkedin.com/in/claytonrberger
-      icon: fab fa-linkedin
-      hex: "#0077b5"
-    - link: https://github.com/hipperger
-      icon: fab fa-github
-      hex: "#303133"
   tutors:
   - name: Patrick White
     id: "4028984"
@@ -661,7 +629,7 @@ schools:
     virtual: https://meet.zollege.com/13709749
     rocketchat: https://chat.austincodingacademy.com/direct/jacobschaefer-1281
     gravatar_email: 'jacobs0408@yahoo.com '
-  logo: "/assets/uploads/logo-austincodingacademy-white.png"
+  logo: "/assets/uploads/new-aca-logo.png"
   seal: "/assets/uploads/logo-austincodingacademy-favicon.png"
   course_guide_online: "/assets/uploads/ACA_Online-Web-Development-Course_CourseGuide_2020.pdf"
   linkedin_pixel: ''
@@ -1181,350 +1149,6 @@ schools:
   getaccept_entity_id: rp3455kn
   course_guide_online: ''
   linkedin_pixel: "2635292"
-- key: stedwardscodingacademy
-  active: true
-  inverted: true
-  name: Austin Coding Academy
-  preapplication_form_guid: 8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab
-  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
-  acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=3203565
-  getaccept_entity_id: rp3455kn
-  primary_light_color: rgb(0, 37, 102)
-  primary_dark_color: rgb(0, 37, 102)
-  secondary_light_color: rgb(254, 224, 75)
-  secondary_dark_color: rgb(254, 224, 75)
-  hero_overlay_color: rgb(45, 47, 119)
-  navigation:
-    header:
-    - title: Courses
-      url: ''
-      class: ''
-    - title: Tuition
-      url: "/tuition/"
-      class: ''
-    - title: Events
-      url: "/events/"
-      class: ''
-    - title: About Us
-      links:
-      - title: For Companies
-        url: "/enterprise-training"
-      - title: FAQ
-        url: "/faq/"
-      - title: Our Team
-        url: "/team/"
-      - title: Our Instructors
-        url: "/instructors/"
-      - title: Contact Us
-        url: "/contact/"
-      - title: Blog
-        url: "/blog/"
-      url: ''
-      class: ''
-    - title: Student Portal
-      url: https://courses.zollege.com/login
-      class: ''
-      target: true
-    - title: Apply
-      url: "/apply/"
-      class: btn {% if school.inverted != true %}btn-round{% endif %} text-white cta-gradient
-        py-1 px-6
-    footer: []
-  tracks:
-  - name: Web Development - In person
-    stripe_product_sku: ''
-  - name: Web Development - Online
-    stripe_product_sku: ''
-  - name: WordPress Fundamentals
-    stripe_product_sku: sku_GehsFmoR7syM1v
-  - name: Build a WordPress + Online Store
-    stripe_product_sku: ''
-  url: https://austincodingacademy.com
-  phone: 15128278498
-  callrail_company_id: 915131377
-  google_analytics: UA-68821515-1
-  reddit_pixel: t2_38d8or3c
-  eventbrite_id: "10937668459"
-  contact_form_guid: 546bfcb7-494a-484c-b8af-24b75354286e
-  cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
-  course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
-  twitter: https://twitter.com/austincoding
-  eventbrite: https://austincodingacademy.eventbrite.com
-  facebook: https://www.facebook.com/AustinCodingAcademy
-  instagram: https://www.instagram.com/austincodingacademy
-  course_guide: "/assets/documents/Austin-Coding-Academy-Course-Guide-Master.pdf"
-  course_guide_img: "/assets/uploads/austincodingacademy-Course-Guide-Master-Table-Content.png"
-  hubspot_company_id: "1662370420"
-  locations:
-  - name: Capital Factory
-    street: 701 Brazos St, Ste 1616
-    city: Austin
-    state: TX
-    postal: 78701
-    url: https://goo.gl/maps/S27rc4Zkmfvpe2Ui8
-  - name: Highland Business Center
-    street: 314 E Highland Mall Blvd, Ste 114
-    city: Austin
-    state: TX
-    postal: 78752
-    url: https://goo.gl/maps/NssXRytdtdezgKft7
-  start_dates:
-  - location: Online - Part Time
-    course: Full Stack Web Development
-    date: October 6
-    days: Tuesday/Thursday
-    time: 6:30 pm - 9:00 pm
-    length: 36 Weeks
-    price: '10,960'
-    hubspot_ticket_id: "147590381"
-    getaccept_template_id: 2422ga56v69
-    getaccept_entity_id: rp3455kn
-  - location: Online - Full Time
-    course: Full Stack Web Development
-    date: September 21
-    days: Monday - Thursday
-    time: 8:00am - 5:00pm
-    length: 18 weeks
-    price: "$7960"
-    hubspot_ticket_id: "145405289"
-    hubspot_override_company_id: '1662370420'
-    getaccept_template_id: 2422ga56v69
-    getaccept_entity_id: rp3455kn
-  - location: Capital Factory Campus
-    course: Full Stack Web Development
-    date: TBD
-    days: Tuesday/Thursday
-    time: 6:30 - 9:00pm
-    length: 36 weeks
-    price: "$10,960"
-    hubspot_ticket_id: "108522335"
-    getaccept_template_id: 2422ga56v69
-    getaccept_entity_id: rp3455kn
-  announcement: <a href="/blog/covid19/">Information on Operations During the COVID-19
-    Crisis</a>
-  linkedin: ''
-  instructors:
-  - name: Keith Kritselis
-    email: keith@austincodingacademy.com
-    linkedin: https://www.linkedin.com/in/keith-kritselis/
-    title: Web 101
-    campus: Downtown
-    bio: Keith is president and co-founder of K &amp; T Manufacturing and has been
-      a contract instructor for programming schools since September 2014.
-    gravatar_email: ''
-  - name: Juan Rodriguez
-    email: juan.j.rodriguez2@gmail.com
-    linkedin: https://www.linkedin.com/in/juanrod1/
-    title: Web 101
-    campus: Highland
-    bio: Juan has been a developer at L7 Informatics since August 2018 and has worked
-      as a developer for MediaScience and DCR Point-of-Sale Systems.
-    gravatar_email: ''
-  - name: Yousif Seedhom
-    email: yousif@austincodingacadey.com
-    linkedin: https://www.linkedin.com/in/yousifs/
-    title: C# 221
-    campus: Highland
-    bio: Yousif has been a senior software engineer at Pulselight since November 2013
-      and before that at Open Sky Software.
-    gravatar_email: ''
-  - name: Matt Viteri
-    email: matt@austincodingacademy.com
-    linkedin: https://www.linkedin.com/in/mxviteri/
-    title: JS 311
-    campus: Highland
-    bio: Matt began at Volusion in July 2017 as a senior software engineer and now
-      works as a software engineering manager.
-    gravatar_email: ''
-  - name: Jon Woo
-    email: jon@austincodingacademy.com
-    linkedin: https://www.linkedin.com/in/jon-woo-3a28175a/
-    title: JS 311
-    campus: Downtown
-    bio: Jon has worked at CDK Global as a software developer since January 2019 and
-      has been an instructor at multiple coding schools since January 2014.
-    gravatar_email: ''
-  team:
-  - name: Chris Lofton
-    title: CEO
-    email: clofton@austincodingacademy.com
-    bio: Chris Lofton graduated from Texas State University with a B.S. in Psychology
-      and began teaching middle school math in San Antonio, TX with Teach For America
-      and KIPP. Through these educational institutions, Chris experienced the power
-      of project-based learning and began to see a path towards improving our education
-      system. While working for the University of Texas, Chris studied with Austin
-      Coding Academy. After his class, he was hired as the Director of Academics,
-      managing all curriculum and instructors, and became the CEO in April of 2017.
-      Chris lives in Austin with his wife and 2-year-old daughter.
-    links:
-    - link: mailto:clofton@austincodingacademy.com
-      icon: fas fa-at
-      hex: "#303133"
-    - link: https://www.linkedin.com/in/chris-lofton-83997431/
-      icon: fab fa-linkedin
-      hex: "#0077b5"
-  - name: Kevin Colten
-    title: CTO + Lead Instructor
-    email: kevin@austincodingacademy.com
-    bio: 'A life-learner and new technology enthusiast, Kevin works hard at the things
-      he loves: programming, teaching, and learning. As a software developer of more
-      than six years and a teacher of more than ten, he has combined his teaching
-      experience and passion for coding to help create an accessible, living, and
-      relevant curriculum aimed to open up the tech industry to those determined to
-      break in.'
-    links:
-    - link: mailto:kevin@austincodingacademy.com
-      icon: fas fa-at
-      hex: "#303133"
-    - link: https://kevincolten.com
-      icon: fas fa-home
-      hex: "#303133"
-    - link: https://www.linkedin.com/in/kevincolten/
-      icon: fab fa-linkedin
-      hex: "#0077b5"
-    - link: https://github.com/kevincolten
-      icon: fab fa-github
-      hex: "#303133"
-  - name: Dan Cumming
-    title: Director of Placement &amp; Partnerships
-    email: dan@austincodingacademy.com
-    bio: As a humble hustler, I&#8217;ve grown with Austin Coding Academy over the
-      last three years holding several roles wherever I could add value to the school
-      and to the students. I graduated with a Journalism BS from University of Richmond
-      (go Spiders!), and got my professional start with sales and leadership. I&#8217;ve
-      traveled coast-to-coast on my motorcycle several times, which led me to find
-      a true home here in Austin in 2014. I&#8217;m all about connecting, so say hello!
-    links:
-    - link: mailto:dan@austincodingacademy.com
-      icon: fas fa-at
-      hex: "#303133"
-    - link: https://www.linkedin.com/in/daniel-cumming/
-      icon: fab fa-linkedin
-      hex: "#0077b5"
-  - name: Nai Obeid
-    title: Compliance &amp; Design
-    email: nai@austincodingacademy.com
-    bio: I&#8217;m a graphic designer from Lebanon. I moved here 9 years ago for a
-      new adventure and I&#8217;ve been lucky to call Austin home since. When I&#8217;m
-      not at work, I&#8217;m usually at one of Austin&#8217;s many amazing coffee
-      shops, making art or planning my next trip or both. Creating beautiful things
-      is my passion. Being at ACA allows me to do what I love everyday, surrounded
-      by the best team.
-    links:
-    - link: mailto:nai@austincodingacademy.com
-      icon: fas fa-at
-      hex: "#303133"
-    - link: https://naio-experimental.tumblr.com/
-      icon: fas fa-home
-      hex: "#303133"
-    - link: https://www.linkedin.com/in/dotthenai/
-      icon: fab fa-linkedin
-      hex: "#0077b5"
-    - link: https://www.instagram.com/naio.design/
-      icon: fab fa-instagram
-      hex: "#f00075"
-  - name: Clayton Berger
-    title: Senior Academic Manager
-    email: clayton@austincodingacademy.com
-    bio: Artistic flair paired with technical deftness. I&#8217;m a teacher turned
-      programmer that loves code and wants all of my students to fall in-love with
-      it too. My mission at ACA is make everyone around me better by making myself
-      better each day!
-    links:
-    - link: mailto:clayton@austincodingacademy.com
-      icon: fas fa-at
-      hex: "#303133"
-    - link: https://linkedin.com/in/claytonrberger
-      icon: fab fa-linkedin
-      hex: "#0077b5"
-    - link: https://github.com/hipperger
-      icon: fab fa-github
-      hex: "#303133"
-  tutors:
-  - name: Patrick White
-    id: "4028984"
-    skills:
-    - JS 411
-    - JS 311
-    - JS 211
-    - Web 101
-    email: pat.k.white@gmail.com
-    location:
-    - ''
-    calendar: https://acaappointment.as.me/?calendarID=4028984
-    virtual: http://meet.zollege.com/4028984
-    rocketchat: http://chat.austincodingacademy.com/direct/patrickwhite-1409
-    gravatar_email: pat.k.white@gmail.com
-  - name: Jason McGee
-    id: "4524426"
-    skills:
-    - JS 411
-    - JS 311
-    - JS 211
-    - Web 101
-    email: mcgeejasond@gmail.com
-    location:
-    - ''
-    calendar: https://acaappointment.as.me/?calendarID=4524426
-    virtual: http://meet.zollege.com/4524426
-    rocketchat: http://chat.austincodingacademy.com/direct/jasonmcgee-1589
-    gravatar_email: mcgeejasond@gmail.com
-  - name: Gabe Flores
-    id: "3949595"
-    skills:
-    - JS 411
-    - JS 311
-    - JS 211
-    - Web 101
-    email: jflores353@gmail.com
-    location:
-    - ''
-    calendar: https://acaappointment.as.me/?calendarID=3949595
-    virtual: http://meet.zollege.com/3949595
-    rocketchat: https://chat.austincodingacademy.com/direct/gabeflores-958
-    gravatar_email: jflores353@gmail.com
-  - name: Antonio Pipitone
-    id: "4524376"
-    skills:
-    - JS 411
-    - JS 311
-    - JS 211
-    - Web 101
-    email: tonezone108@gmail.com
-    location:
-    - ''
-    calendar: https://acaappointment.as.me/?calendarID=4524376
-    virtual: http://meet.zollege.com/4524376
-    rocketchat: http://chat.austincodingacademy.com/direct/antoniopipitone-1365
-    gravatar_email: tonezone108@gmail.com
-  - name: Eddie Crochet
-    id: "3795655"
-    skills:
-    - Web 101
-    - JS 211
-    email: eddiecrochet1994@gmail.com
-    location: []
-    calendar: https://acaappointment.as.me/?calendarID=3795655
-    virtual: https://meet.zollege.com/3795655
-    rocketchat: https://chat.austincodingacademy.com/direct/eddiecrochet-939
-    gravatar_email: eddiecrochet1994@gmail.com
-  - name: Jacob Schaefer
-    id: "13709749"
-    skills:
-    - Web 101
-    - JS 211
-    - JS 311
-    - JS 411
-    email: 'jacobs0408@yahoo.com '
-    location: []
-    calendar: https://acaappointment.as.me/?appointmentType=13709749
-    virtual: https://meet.zollege.com/13709749
-    rocketchat: https://chat.austincodingacademy.com/direct/jacobschaefer-1281
-    gravatar_email: jacobs0408@yahoo.com
-  logo: "/assets/uploads/logo-austincodingacademy-white.png"
-  seal: "/assets/uploads/logo-austincodingacademy-favicon.png"
-  course_guide_online: "/assets/uploads/ACA_Online-Web-Development-Course_CourseGuide_2020.pdf"
-  linkedin_pixel: ''
 logos:
 - name: Indeed
   width: 721px
@@ -1600,3 +1224,4 @@ logos:
   src: "/assets/uploads/logo-onit.png"
 
 ---
+<img src="/assets/uploads/screen-shot-2020-09-28-at-1-41-36-pm.png">

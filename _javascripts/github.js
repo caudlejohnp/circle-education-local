@@ -1,4 +1,4 @@
-const Octokit = require('@octokit/rest');
+const { Octokit } = require('@octokit/rest');
 const octokit = new Octokit({ auth: process.env.GITHUB_API_KEY });
 const { readdirSync } = require('fs');
 let repos = [];
@@ -7,7 +7,7 @@ const createRepo = async name => {
   try {
     if (!repos.includes(name)) {
       await octokit.repos.createInOrg({
-        org: 'AustinCodingAcademy',
+        org: 'CircleEducation',
         name: name,
         private: true,
         homepage: `https://${name}`
@@ -16,7 +16,7 @@ const createRepo = async name => {
     }
     if (!repos.includes(`preview.${name}`)) {
       await octokit.repos.createInOrg({
-        org: 'AustinCodingAcademy',
+        org: 'CircleEducation',
         name: `preview.${name}`,
         private: true,
         homepage: `https://preview.${name}`
@@ -46,7 +46,7 @@ const listRepos = async (page) => {
   try {
     while (!allRepos) {
       const response = await octokit.repos.listForOrg({
-        org: "AustinCodingAcademy",
+        org: "CircleEducation",
         type: "all",
         per_page: 100,
         page
