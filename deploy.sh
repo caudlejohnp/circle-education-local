@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --global user.email "kevin@austincodingacademy.com"
+git config --global user.email "kevin@zollege.com"
 git config --global user.name "Kevin Colten"
 if [ "${CIRCLE_BRANCH}" == "preview" ]; then export JEKYLL_ENV='preview.'; fi
 if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; then
@@ -10,9 +10,6 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
   npm run images
   npm run configs
   node _javascripts/github.js
-  # KEY=austincodingacademy.com npm run jekyll-build-amp
-  # npm run optimize
-  # npm run css
   ITER=0
   for file in ./_configs/*; do
     if [[ -f $file ]] && [[ $(($ITER % $CIRCLE_NODE_TOTAL)) == $CIRCLE_NODE_INDEX ]]; then
@@ -27,13 +24,7 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
       npm run jekyll-build-amp
       npm run optimize
       if [ "${CIRCLE_BRANCH}" == "preview" ]; then npm run encrypt; fi
-      if [[ "${KEY}" == "austincodingacademy.com" ]] && [[ "${CIRCLE_BRANCH}" == "master" ]]
-      then
-        sudo apt install rsync
-        rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
-      else
-        npm run deploy
-      fi
+      npm run deploy
     fi
     ((ITER++))
   done
