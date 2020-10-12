@@ -21,3 +21,4 @@ _data/tutors.yml
 _configs
 tmp
 vendor
+.jekyll-cache
