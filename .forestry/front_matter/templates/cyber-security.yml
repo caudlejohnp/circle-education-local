@@ -1,0 +1,141 @@
+---
+label: cyber-security
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: title
+  label: title
+- type: list
+  name: amp_components
+  label: amp_components
+- type: text
+  name: head_title
+  label: head_title
+- type: text
+  name: description
+  label: description
+- type: list
+  name: redirect_from
+  label: redirect_from
+- type: text
+  name: hero
+  label: hero
+- type: text
+  name: hero_heading
+  label: hero_heading
+- type: textarea
+  name: hero_text
+  label: hero_text
+- type: field_group_list
+  name: overview
+  label: overview
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: boolean
+    name: odd
+    label: odd
+  - type: textarea
+    name: text
+    label: text
+  - type: file
+    name: img_src
+    label: img_src
+- type: field_group
+  name: job_placement
+  label: job_placement
+  fields:
+  - type: field_group_list
+    name: stats
+    label: stats
+    fields:
+    - type: text
+      name: stat
+      label: stat
+    - type: text
+      name: descript
+      label: descript
+  - type: field_group_list
+    name: value_props
+    label: value_props
+    fields:
+    - type: text
+      name: heading
+      label: heading
+    - type: textarea
+      name: text
+      label: text
+    - type: file
+      name: img_src
+      label: img_src
+    - type: text
+      name: img_width
+      label: img_width
+- type: field_group_list
+  name: successes
+  label: successes
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: company
+    label: company
+  - type: file
+    name: img_src
+    label: img_src
+  - type: textarea
+    name: learn_url
+    label: learn_url
+- type: field_group_list
+  name: features
+  label: features
+  fields:
+  - type: text
+    name: heading
+    label: heading
+  - type: textarea
+    name: text
+    label: text
+  - type: file
+    name: img_src
+    label: img_src
+  - type: text
+    name: img_width
+    label: img_width
+- type: field_group_list
+  name: schools
+  label: schools
+  fields:
+  - type: text
+    name: key
+    label: key
+  - type: text
+    name: next_start_date
+    label: next_start_date
+  - type: text
+    name: backend
+    label: backend
+  - type: field_group_list
+    name: courses
+    label: courses
+    fields:
+    - type: text
+      name: code
+      label: code
+    - type: list
+      name: sections
+      label: sections
+  - type: list
+    name: tuition_options
+    label: tuition_options
