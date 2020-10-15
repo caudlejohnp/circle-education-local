@@ -50,30 +50,6 @@ schools:
     sections: []
   - code: CYS 511
     sections: []
-  tuition_options:
-  - title: "{{ school.name }} Payment Plan (Budget Option)"
-    description: With our new payment plan, you can get started with class by making
-      a $1,000 deposit. After that you'll make bi-weekly payments of $250 for 22 months.
-      No interest and no penalty for prepayment!
-    price_header: Total Price
-    price: "$12,750"
-    price2: "$250"
-  - title: Pay Up Front (Savings Option)
-    description: Save $1,000 on the cost of the Cyber Security Track when
-      you choose to pay for the entire cost of the program up front. Instead of paying
-      for the individual price of 5 cyber security courses, ($11,960), you’ll pay
-      the reduced price of $10,960.
-    price_header: Total Price
-    price: "$10,960"
-  - title: Apply to Join the Cyber Security Track
-    description: Submit your short 5-minute application to {{ school.name }}’s
-      Cyber Security Track and discuss tuition with a follow-up call with
-      your admissions advisor.
-    button: Apply
-    url: "/apply"
-    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark
-      hover-white center mt-4
-
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -257,46 +233,6 @@ schools:
   </section>
   {% endif %}
 
-
-
-
-  {% if school.tuition_options.size > 0 %}
-    <section class="bg-textured">
-      <!-- TUITION -->
-      {% include tuition-section.html %}
-      <div class="pb-8 mt-4">
-        <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
-          <div class="card-body">
-            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="display-7 pb-4 text-center">
-              Join our upcoming start date:
-            </div>
-            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="shadow border">
-              <div class="text-center display-6 pt-4">
-                <!-- Find first start date of correct course type -->
-                {% assign next_start_date = "" %}
-                {% for start_date in school.start_dates %}
-                  {% if start_date.course == "Cyber Security" and next_start_date == "" %}
-                    {% unless start_date.location contains "Online" %}
-                      {% assign next_start_date = start_date %}
-                    {% endunless %}
-                  {% endif %}
-                {% endfor %}
-                {% if next_start_date.days contains "/" %}
-                  {% assign days = next_start_date.days | split: "/" %}
-                {% else %}
-                  {% assign days = next_start_date.days | split: " - " %}
-                {% endif %}
-                {{ days[0] }}, {{ next_start_date.date | liquify }}
-              </div>
-              <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="text-center py-4">
-                {% include btn-apply.html %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endif %}
   <section id="contact" class="container-fluid py-11">
     <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
