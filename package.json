@@ -31,7 +31,7 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@octokit/rest": "^18.0.6",
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.5.3",
     "change-case": "^4.1.1",
     "cli-real-favicon": "^0.0.8",
     "cloudflare": "^2.7.0",
