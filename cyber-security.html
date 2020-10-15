@@ -209,13 +209,16 @@ schools:
               {% endfor %}
             </div>
           </div>
-          <div
-            amp-fx="fade-in"
-            data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
-            class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center"
-          >
-            {{ course.length | liquify }}
-          </div>
+          {{ course.length }}
+          {% if course.length != '' and course.length != nil %}
+            <div
+              amp-fx="fade-in"
+              data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
+              class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center"
+            >
+              {{ course.length | liquify }}
+            </div>
+          {% endif %}
         </div>
       {% endfor %}
       <!-- course cards end -->
