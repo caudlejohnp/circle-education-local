@@ -214,7 +214,7 @@ schools:
       price: "$7,960"
       payment_deposit: "$7,960"
       payment_plan_paycove_template: ''
-      deposit_hubspot_product_id:
+      deposit_hubspot_product_id: 
       payment_plan_hubspot_product_id: ''
       picture: "/assets/uploads/lcawebsite_tuitionpage_fulltuition.png"
     - title: Single Course (Web 101)
@@ -225,7 +225,7 @@ schools:
       price: "$490"
       payment_deposit: "$1990"
       payment_plan_paycove_template: ''
-      deposit_hubspot_product_id:
+      deposit_hubspot_product_id: 
       payment_plan_hubspot_product_id: ''
       picture: ''
     - title: Texas Tech Credit Union
@@ -294,8 +294,9 @@ schools:
       deposit_hubspot_product_id: 110739862
       payment_plan_hubspot_product_id: ''
       picture: "/assets/uploads/TTCAwebsite_TuitionPage_SallieMae.png"
+
 ---
-{% for _page in site.pages %}
+<img src="/assets/uploads/acawebsite_tuitionpage_paymentplan1.png">{% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
