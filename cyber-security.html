@@ -106,7 +106,7 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
         tabindex="-1"
         role="dialog"
       >
-        {% include course-guide-form.html lightbox=true text_class="text-white" %}
+        {% include course-guide-form.html course_guide_href=page.course_guide lightbox=true text_class="text-white" %}
       </amp-lightbox>
     {% endif %}
     <div class="ml-2">{% include btn-apply.html %}</div>
@@ -234,7 +234,7 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
   <!-- htmllint preset="$previous" -->
     <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html fade=true %}
+        {% include course-guide-form.html course_guide_href=page.course_guide fade=true %}
       </div>
     </div>
   </section>
